@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page3</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin-left: 25px;
+            margin-right: 25px;
+          }
+    
+          .navbar-nav {
+            justify-content: center; 
+            padding: 1px;
+          }
+    
+          .nav-link {
+            font-size: 2rem;
+            text-decoration: none;
+          }
+    
+          .btn-contact {
+            font-size: 1rem;
+          }
+    
+          .nav-item.dropdown:hover .dropdown-menu {
+            display: block; 
+            margin-top: 0;
+          }
+    
+          .dropdown-menu {
+            transition: all 0.1s ease-in-out; 
+            margin-top: -5px; 
+          }
+    
+          .custom-button {
+            font-size: 1.5rem; 
+            padding: 10px 20px; 
+            border-width: 2px; 
+            
+          }
+    
+          .custom-dropdown {
+            min-width: 100px; 
+            font-size: 1.25rem;
+            border-radius: 10px; 
+          }
+            
+          .custom-dropdown .dropdown-item {
+            padding: 10px 15px; 
+            font-size: 1.8rem; 
+          }
+    
+          
+          .resize-img img {
+            width: 100%; 
+            height: 600px; 
+            object-fit: cover; 
+            position: relative;
+            top: -20px;
+          }
+    
+          .mask {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+    
+          .nav-link:hover {
+            text-decoration: none; 
+          }
+    
+          .custom-button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border-width: 2px;
+            font-weight: bold; 
+        }
+
+        .marquee-text {
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 1px rgb(17, 16, 16);
+            font-size: 100px;
+            font-weight: 700;
+            
+          }
+
+          .custom-font-size {
+            font-size: 5rem;
+          }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <!-- NAVIGATION -->
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid mb-0">
+            <img src="{% static 'image/logo.png' %}" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="home1">Home Page 1</a></li>
+                            <li><a class="dropdown-item" href="#">Home Page 2</a></li>
+                            <li><a class="dropdown-item" href="#">Home Page 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="aboutus">About Us</a></li>
+                            <li><a class="dropdown-item" href="ourteam">Our Team</a></li>
+                            <li><a class="dropdown-item" href="pricingplan">Pricing Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="service">Services</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="project">Projects</a>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="blog1">Blog 1</a></li>
+                            <li><a class="dropdown-item" href="blog2">Blog 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <a href="contact" class="text-decoration-none">
+                      <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
+                          Contact Us
+                      </button>
+                  </a>
+                </form>
+            </div>
+        </div>
+      </nav>
+      
+      <!-- HOME IMAGE -->
+       
+      <div class="position-relative resize-img">
+    
+        <img src="{% static 'image/homepage31.jpg' %}" alt="Home Image" style="border-radius: 15px;">
+
+        <div class="mask text-light d-flex flex-column lign-items-center justify-content-center align-items-center  p-4 mt-5">
+          <div class="container">
+              <h3 style="font-size: 20px;">We Draft to Perfection</h3>
+              <h1 class=" fw-lighter" style="font-size: 90px;">EVERY PLANS</h1>
+              <h1 class="display-1 fw-bold" style="font-size: 100px;">IS SPECIAL</h1>
+              <a href="contact"><button class="btn btn-outline-light custom-button mt-5 rounded-pill" type="button">Take a Look</button></a>
+          </div>
+        </div>
+      
+      </div> 
+      
+      <div style="margin-top: 100px;"></div>
+
+
+      <!-- GUARANTEE -->
+
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="{% static 'image/guar.png' %}" alt="">
+            </div>
+            <div class="col-12">
+                <h6 class="rounded-pill p-1" style="background-color: rgb(212, 209, 209); width:60px">Since 1986</h6>
+                <h1 class="display-5 fw-bold">We reach beyond established</h1>
+                <h1 class="display-5 fw-bold">trends solutions.</h1>
+                <p class="mt-4" style="font-size: 15px;">
+                    We create stylish and comfortable interior design project of studio is made. <br> Mauris tempus nisl vitae magna pulvinar laoreet. Nullam erat ipsum, mattis <br>nec mollis ac, accumsan a enim.Mauris tempus nisl vitae.
+                </p>
+                <div>
+                    <ul>
+                        <li>Construction Planning According to the opinion</li>
+                        <li>Project Analysis habits and nature of the person</li>
+                        <li>Smart House System experience of work with different</li>
+                    </ul>
+                </div>
+                <form role="search">
+                    <a href="aboutus" class="text-decoration-none ">
+                      <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
+                        Read More
+                      </button>
+                    </a>
+                  </form>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- MARQUEE -->
+
+      <div class="mt-5" >
+        <marquee behavior="scroll" direction="left" scrollamount="10" data-aos="fade-up">
+          <div>
+            <h1 class="marquee-text"> <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE</h1>
+          </div>
+        </marquee>
+      </div>
+
+
+      <!-- DESIGN -->
+       
+      <div class="text-center mt-5" data-aos="fade-up">
+        <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 130px; margin: 0 auto; letter-spacing: 1px;">
+          OUR SERVICES
+        </h6>
+        <h1 class="custom-font-size fw-bold">Architects excited about beauty</h1>
+        <h1 class="custom-font-size fw-bold">affordability sustainability.</h1>
+      </div>
+
+      <!-- MARQUEE STICKERS -->
+
+      <div class="mt-5" >
+        <marquee behavior="scroll" direction="left" scrollamount="10" data-aos="fade-up">
+          <div>>
+            <h1 class="marquee-text"> <img src="{% static 'image/sticker1.png' %}"><img src="{% static 'image/sticker2.png' %}"> <img src="{% static 'image/sticker3.png' %}">  <img src="{% static 'image/sticker4.png' %}"> <img src="{% static 'image/sticker5.png' %}"> <img src="{% static 'image/sticker6.png' %}"><img src="{% static 'image/sticker7.png' %}"> <img src="{% static 'image/sticker8.png' %}"> <img src="{% static 'image/sticker9.png' %}"> <img src="{% static 'image/sticker10.png' %}">  <img src="{% static 'image/sticker1.png' %}"><img src="{% static 'image/sticker2.png' %}"> <img src="{% static 'image/sticker3.png' %}">  <img src="{% static 'image/sticker4.png' %}"> <img src="{% static 'image/sticker5.png' %}"> <img src="{% static 'image/sticker6.png' %}"><img src="{% static 'image/sticker7.png' %}"> <img src="{% static 'image/sticker8.png' %}"> <img src="{% static 'image/sticker9.png' %}"> <img src="{% static 'image/sticker10.png' %}"></h1>
+          </div>
+        </marquee>
+        <hr class="text-dark ">
+      </div>
+
+
+
+
+
+    
+       
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      
+        AOS.init({
+            duration: 1000, 
+            easing: 'ease-in-out', 
+            once: true
+        });
+    </script>
+</body>
+</html>
