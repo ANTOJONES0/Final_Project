@@ -43,11 +43,11 @@
       }
 
       .custom-button {
-        font-size: 1.5rem; 
-        padding: 10px 20px; 
-        border-width: 2px; 
-        
-      }
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        border-width: 2px;
+        font-weight: bold; 
+    }
 
       .custom-dropdown {
         min-width: 100px; 
@@ -81,12 +81,7 @@
         text-decoration: none; 
       }
 
-      .custom-button {
-        font-size: 1.5rem;
-        padding: 10px 20px;
-        border-width: 2px;
-        font-weight: bold; 
-    }
+      
 
     .responsive-img {
       width: 100%;       
@@ -195,10 +190,11 @@
     
     
     .card h2 {
-      font-size: 30px;
-      color: black;
-      margin: 15px 10px;
-      line-height: 1.4; 
+        font-size: 28px;
+        color: #333;
+        margin: 15px 10px;
+        line-height: 1.4; 
+      
     }
     
     .card a {
@@ -562,6 +558,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          
           <div class="mt-5"></div>
         </div>
       </div>
@@ -606,6 +603,7 @@
 
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+          
           <!-- First Slide -->
           <div class="carousel-item active ">
             <div class="d-flex justify-content-center">
@@ -665,6 +663,8 @@
             </div>
           </div>
         </div>
+
+
         <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -868,9 +868,9 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/blog12.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/home3trend1.png' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
-                    <h2 class="h5">Tips for planning a project architecture</h2>
+                    <h2  >Tips for planning a project architecture</h2>
                   </div>
                 </a>
               </div>
@@ -879,9 +879,9 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/blog13.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/home3trend2.png' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
-                    <h2 class="h5">Minimalist design of Architect Mark Ruffalo</h2>
+                    <h2>Minimalist design of Architect Mark Ruffalo</h2>
                   </div>
                 </a>
               </div>
@@ -890,9 +890,9 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/blog14.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/home3trend3.png' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
-                    <h2 class="h5">Madras Homestay: Uncomplicated yet Effective</h2>
+                    <h2>Madras Homestay: Uncomplicated yet Effective</h2>
                   </div>
                 </a>
               </div>
@@ -930,7 +930,7 @@
             </div>
       
             <!-- Second Column -->
-            <div class="col-12 col-sm-8 text-center">
+            <div class="col-12 col-md-8 text-center">
               <div class="d-flex flex-column flex-md-row pb-5">
                 <h1 class="text-white mb-3 mb-md-0 me-md-3 text-center text-md-start" style="font-size: 40px;">
                   Subscribe to Our <br class="d-none d-md-block"> Newsletter

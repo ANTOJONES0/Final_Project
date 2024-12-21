@@ -124,6 +124,45 @@
           font-size: 20px;
         }
 
+        
+
+        
+
+        .photo{
+          margin: 100px 0 0 200px;
+          width: 70%;
+          height: 450px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .photo img{
+          width: 10%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+          transition: all ease-in-out 0.5s;
+        }
+
+        .photo img:hover{
+          width: 25%;
+        }
+
+        .cards-l a{
+          text-decoration: none;
+          color: black;
+          
+        }
+
+        .card-l{
+          border-radius: 20px;
+        }
+
+
+        
+      
+
        
 
 
@@ -306,6 +345,19 @@
 
       <div style="margin-top: 100px;"></div>
 
+      <!--PHOTOS
+      
+      <div class="image-hover-container">
+                <img class="d-block w-100 carousel-img mx-3" src="{% static 'image/project2.png' %}" alt="Second slide">
+                <div class="hover-message">
+                  <p>EXCAVATION</p>
+                  <h4>Modular Modern Farmwork</h4>
+                </div>
+              </div>-->
+
+     
+    
+
 
       <!-- DESIGN -->
        
@@ -338,7 +390,7 @@
           <!-- Innovation & Remodeling -->
           <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
             <div class="d-flex">
-              <img src="{% static 'image/serve2.png' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'image/serve22.png' %}" alt="Image" class="img-fluid">
               <div class="ps-3">
                 <h1>Innovation & Remodeling</h1>
                 <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
@@ -476,14 +528,16 @@
         <hr class="text-dark ">
       </div>
 
+      <div style="margin-top: 100px;"></div>
+
       
 
 
       <!--PRICE-->
 
-      <div class="container-fluid">
+      <div class="container-fluid" data-aos="fade-up">
         <div class="row d-flex justify-content-center">
-          <div class="col-sm-4">
+          <div class="col-md-12 col-xl-4">
             <div class=" mt-5" data-aos="fade-up">
               <h6 class="rounded-pill p-2 mt-5" style="background-color: rgb(211, 203, 203); width: 95px;  letter-spacing: 1px;">
                 PRICING TABLE
@@ -494,108 +548,179 @@
             </div>
           </div>
           
-          <div class="col-sm-8">
+          <div class="col-md-12 col-xl-8">
             <div class="cards">
-
-              <!--CARD !-->
+              
+              
+              <!--CARD 1-->
 
 
               <div class="card p-5" style="border-radius: 20px;">
                 <h2 style="font-size: 20px;">Small Business</h2>
-                <div class="d-flex justify-content-start"  style="size: 50px;">
-                  <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-start">
-                      <p style="font-size: 50px; ">$</p> 
-                      <h1 style="font-size: 70px;">299 <span style="font-size:50px;" class="me-5">/mo</span></h1>
-                      
+                <div class="d-flex justify-content-start"  style="size: 50px;"></div>
+                <div class="row">
+                  <div class="col-md-4 d-flex justify-content-start">
+                    
+                    <div>
+                      <h1 style="font-size: 50px;">$ <span style="font-size: 70px;" class="fw-bolder">299</span> <span style="font-size:50px;" class="me-5">/mon</span></h1>
                     </div>
-                    <div class="col-lg-6 d-flex justify-content-start">
-                      <ol style="list-style: none; padding: 0;" class="">
-                        <li><i class="fas fa-check "></i> Planning & Design </li><br>
-                        <li style="padding-left: 24px;">Unlimited Consultations</li><br>
-                        <li><i class="fas fa-check "></i> Architecture & Design</li>
-                      </ol>
-                      
-                      
-                    </div>
+                    <div style="width: 2px; height: 190px; background-color: rgb(20, 19, 19);" class="me-5 d-none d-md-block"></div>
 
-                    <div class="col-lg-6 d-flex justify-content-start">
-                      <ol style="list-style: none; padding-left:15px;">
-                        
-                        <li style="padding-left:25px;">Room design included</li><br>
-                        <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
-                      </ol>
+                    
+                  </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          <li><i class="fas fa-check "></i> Planning & Design </li><br>
+                          <li style="padding-left: 24px;">Unlimited Consultations</li><br>
+                          <li><i class="fas fa-check "></i> Architecture & Design</li>
+                        </ol>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          
+                          <li style="padding-left: 24px;">Room Design Included</li><br>
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                      <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
+                        <div>
+                          <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        </div>
+                      </button>
                     </div>
                   </div>
-                  
-                </div>
-                <div class="d-flex justify-content-end ">
-                  <div class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
-                    <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
-                  </div>
+                    
+                    
                 </div>
               </div>
 
               <br><br>
+
+              <!--CARD 2-->
 
               
-              <div class="card p-5 bg-dark" style="border-radius: 20px;">
-                <h2 style="font-size: 20px;" class="text-white">Small Business</h2>
-                <div class="d-flex justify-content-start"  style="size: 50px;">
-                  <p style="font-size: 50px; " class="text-white">$</p> 
-                  <h1 style="font-size: 70px;" class="text-white">345<span style="font-size:50px;" class="me-5 text-white">/mo</span></h1>
-                  <div style="width: 1px; height: 150px; background-color: rgb(255, 255, 255);" class="me-5"></div>
-    
-                  <ol style="list-style: none; padding: 0;" class="ps-5">
-                    <li class="text-white"><i class="fas fa-check text-white "></i> Planning & Design Sketches</li><br>
-                    <li class="text-white"><i class="fas fa-check text-white "></i> Unlimited Consultations</li><br>
-                    <li class="text-white"><i class="fas fa-check text-white "></i> Architecture & Design</li>
-                  </ol>
-                  
-                  <ol style="list-style: none; padding-left:15px;">
+              <div class="card p-5 bg-dark" style="border-radius: 20px; ">
+                <h2 style="font-size: 20px; color:white">Small Business</h2>
+                <div class="d-flex justify-content-start"  style="size: 50px;"></div>
+                <div class="row">
+                  <div class="col-md-4 d-flex justify-content-start">
                     
-                    <li style="padding-left:25px;" class="text-white">Room design included</li><br>
-                    <li class="text-white"><i class="fas fa-check text-white" style="margin-right: 5px;"></i>Interior Design</li>
-                  </ol>
-                </div>
-                <div class="d-flex justify-content-end ">
-                  <div class="bg-white p-3 " style="width: fit-content; border-radius: 15px;">
-                    <a href="pricingplan" class="text-black" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                    <div class="text-white">
+                      <h1 style="font-size: 50px;">$ <span style="font-size: 70px;" class="fw-bolder">345</span> <span style="font-size:50px;" class="me-5">/mon</span></h1>
+                    </div>
+                    <div style="width: 2px; height: 190px; background-color: rgb(255, 255, 255);" class="me-5 d-none d-md-block"></div>
+
+                    
                   </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0; " class="ps-5 text-white">
+                          <li><i class="fas fa-check "></i> Planning & Design </li><br>
+                          <li><i class="fas fa-check "></i> Unlimited Consultations</li><br>
+                          <li><i class="fas fa-check "></i> Architecture & Design</li>
+                        </ol>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0; " class="ps-5 text-white">
+                          
+                          <li style="padding-left: 24px;">Room Design Included</li><br>
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                      <button class="bg-white p-3 " style="width: fit-content; border-radius: 15px;">
+                        <div>
+                          <a href="pricingplan" class="text-dark" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                    
+                    
                 </div>
               </div>
 
               <br><br>
 
+              <!--CARD 3-->
+
 
               <div class="card p-5" style="border-radius: 20px;">
                 <h2 style="font-size: 20px;">Small Business</h2>
-                <div class="d-flex justify-content-start"  style="size: 50px;">
-                  <p style="font-size: 50px; ">$</p> 
-                  <h1 style="font-size: 70px;">540 <span style="font-size:50px;" class="me-5">/mo</span></h1>
-                  <div style="width: 1px; height: 150px; background-color: black;" class="me-5"></div>
-    
-                  <ol style="list-style: none; padding: 0;" class="ps-5">
-                    <li><i class="fas fa-check "></i> Planning & Design Sketches</li><br>
-                    <li><i class="fas fa-check "></i> Unlimited Consultations</li><br>
-                    <li><i class="fas fa-check "></i> Architecture & Design</li>
-                  </ol>
-                  
-                  <ol style="list-style: none; padding-left:15px;">
+                <div class="d-flex justify-content-start"  style="size: 50px;"></div>
+                <div class="row">
+                  <div class="col-md-4 d-flex justify-content-start">
                     
-                    <li><i class="fas fa-check " style="margin-right: 5px;"></i>Room Design Included</li>
-                    <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
-                  </ol>
-                </div>
-                <div class="d-flex justify-content-end ">
-                  <div class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
-                    <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                    <div>
+                      <h1 style="font-size: 50px;">$ <span style="font-size: 70px;" class="fw-bolder">540</span> <span style="font-size:50px;" class="me-5">/mon</span></h1>
+                    </div>
+                    <div style="width: 2px; height: 190px; background-color: rgb(20, 19, 19);" class="me-5 d-none d-md-block"></div>
+
+                    
                   </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          <li><i class="fas fa-check "></i> Planning & Design </li><br>
+                          <li><i class="fas fa-check "></i> Unlimited Consultations</li><br>
+                          <li><i class="fas fa-check "></i> Architecture & Design</li>
+                        </ol>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Room Design Included</li>
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                      <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
+                        <div>
+                          <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                    
+                    
                 </div>
+              </div>
+
+
+                
               </div>
             </div>
           </div>
+      </div>
+
+
+
+      <!--LATEST NEWS-->
+
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="mt-5">
+          <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 80px;  letter-spacing: 1px;">
+            LATEST POST
+          </h6>
+          <h1 class="custom-font-size fw-bold">Read our latest news</h1>
+          <h1 class="custom-font-size fw-bold">be always in trend</h1>
+          <form role="search">
+            <a href="project" class="text-decoration-none ">
+              <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
+                Take a Look
+              </button>
+            </a>
+          </form>
         </div>
+        
 
         
 
@@ -604,7 +729,176 @@
 
       </div>
 
-      <div style="margin-top: 100px;"></div>
+      
+
+      <!--CARDS-->
+
+      <div class="cards cards-l mt-5 ">
+
+
+        <div class="row d-flex justify-content-center">
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend1.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>Tips for planning a project architecture</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend2.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>Minimalist design of Architect  Ruffalo</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px;"></div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend3.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>Madars Homestay: Uncomplicated yet Effective</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend4.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>New government UK rules about living in forest</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+         
+
+        
+        
+      </div>
+
+      <div>
+        <!--FOOTER-->
+
+        <footer style="background-color: black; padding-top: 40px; border-radius: 15px; ">
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <!-- First Column -->
+              <div class="col-12 col-sm-12 col-lg-4 text-center text-sm-start mb-4 mb-sm-0">
+                <img src="{% static 'image/logo2.png' %}" alt="Home Image" class="img-fluid" style="height: 100px; width: 50%;">
+                <div class="social-icons  my-4">
+                  <a href="https://www.youtube.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-youtube fa-2x"></i>
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-facebook fa-2x"></i>
+                  </a>
+                  <a href="https://www.twitter.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-twitter fa-2x"></i>
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank" class="text-white">
+                    <i class="fab fa-instagram fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+        
+              <!-- Second Column -->
+              <div class="col-12 col-sm-8 text-center">
+                <div class=" row d-flex flex-column flex-md-row pb-5">
+                  <div class="col">
+                    <h1 class="text-white mb-3 mb-md-0 me-md-3 text-center text-md-start" style="font-size: 40px;">
+                      Subscribe to Our <br class="d-none d-md-block"> Newsletter
+                    </h1>
+                  </div>
+                  <div class="col d-flex flex-column flex-md-row align-items-center gap-3 ms-5">
+                    
+                      <input 
+                        type="text" 
+                        placeholder="Enter your mail address" 
+                        class="form-control rounded-pill custom-input p-5" 
+                        style="background-color: black; color: white; caret-color: white; width: 500px;">
+                      <button class="btn bg-white text-dark rounded-pill fw-bold p-4" style="width: 100px;">Subscribe Now</button>
+                    
+                  </div>
+                </div>
+        
+                <hr class="text-white my-4 pb-5">
+        
+                <div class="row text-center text-md-start pb-5">
+                  <!-- Useful Links -->
+                  <div class="col-12 col-md-4 mb-4">
+                    <h3 class="text-white mb-3">Useful Links</h3>
+                    <div class="d-flex flex-column align-items-center align-items-md-start gap-2">
+                      <a href="home" class="text-white text-decoration-none h4 pt-3">Home</a>
+                      <a href="about" class="text-white text-decoration-none h4">About</a>
+                      <a href="service" class="text-white text-decoration-none h4">Services</a>
+                      <a href="contact" class="text-white text-decoration-none h4">Contact</a>
+                    </div>
+                  </div>
+        
+                  <!-- Working Time -->
+                  <div class="col-12 col-md-4 mb-4">
+                    <h3 class="text-white mb-3">Working Time</h3>
+                    <p class="text-white mb-1 h4 pt-3">Mon – Fri: 9:00 AM – 5:00 PM</p>
+                    <p class="text-white mb-1 h4 pt-2">Saturday: 10:00 AM – 6:00 PM</p>
+                    <p class="text-white h4 pt-2">Sunday: Closed</p>
+                  </div>
+        
+                  <!-- Contact Info -->
+                  <div class="col-12 col-md-4">
+                    <h3 class="text-white mb-3">Say Hello</h3>
+                    <a href="mailto:antojones2003@gmail.com" class="text-white d-block mb-1 h4 pt-3">antojones2003@gmail.com</a>
+                    <p class="text-white mb-0 h4 pt-2">+1 980 563 827 638</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="text-dark d-flex justify-content-between p-2 bg-white rounded-pill mx-5">
+            <div class="h5">Terms and Conditions</div>
+            <div class="h5">©2024 PBM Infotech</div>
+            <div class="h5">Privacy and Policy</div>
+          </div>
+         </footer>
+      </div>
 
 
 
@@ -615,85 +909,9 @@
    
    
       
-      <!--FOOTER-->
+     
    
-      <footer style="background-color: black; padding-top: 40px; border-radius: 15px; ">
-        <div class="container text-center">
-          <div class="row align-items-center">
-            <!-- First Column -->
-            <div class="col-12 col-sm-12 col-lg-4 text-center text-sm-start mb-4 mb-sm-0">
-              <img src="{% static 'image/logo2.png' %}" alt="Home Image" class="img-fluid" style="height: 100px; width: 50%;"><br><br>
-              <div class="social-icons  my-4">
-                <a href="https://www.youtube.com" target="_blank" class="text-white me-3">
-                  <i class="fab fa-youtube fa-2x"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank" class="text-white me-3">
-                  <i class="fab fa-facebook fa-2x"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank" class="text-white me-3">
-                  <i class="fab fa-twitter fa-2x"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="text-white">
-                  <i class="fab fa-instagram fa-2x"></i>
-                </a>
-              </div>
-            </div>
       
-            <!-- Second Column -->
-            <div class="col-12 col-sm-8 text-center">
-              <div class="d-flex flex-column flex-md-row pb-5">
-                <h1 class="text-white mb-3 mb-md-0 me-md-3 text-center text-md-start" style="font-size: 40px;">
-                  Subscribe to Our <br class="d-none d-md-block"> Newsletter
-                </h1>
-                <div class="d-flex flex-column flex-md-row align-items-center gap-3 ms-5">
-                  <input 
-                    type="text" 
-                    placeholder="Enter your mail address" 
-                    class="form-control rounded-pill custom-input p-5" 
-                    style="background-color: black; color: white; caret-color: white; width: 500px;">
-                  <button class="btn bg-white text-dark rounded-pill fw-bold p-4" style="width: 100px;">Subscribe Now</button>
-                </div>
-              </div>
-      
-              <hr class="text-white my-4 pb-5">
-      
-              <div class="row text-center text-md-start pb-5">
-                <!-- Useful Links -->
-                <div class="col-12 col-md-4 mb-4">
-                  <h3 class="text-white mb-3">Useful Links</h3>
-                  <div class="d-flex flex-column align-items-center align-items-md-start gap-2">
-                    <a href="home" class="text-white text-decoration-none h4 pt-3">Home</a>
-                    <a href="about" class="text-white text-decoration-none h4">About</a>
-                    <a href="service" class="text-white text-decoration-none h4">Services</a>
-                    <a href="contact" class="text-white text-decoration-none h4">Contact</a>
-                  </div>
-                </div>
-      
-                <!-- Working Time -->
-                <div class="col-12 col-md-4 mb-4">
-                  <h3 class="text-white mb-3">Working Time</h3>
-                  <p class="text-white mb-1 h4 pt-3">Mon – Fri: 9:00 AM – 5:00 PM</p>
-                  <p class="text-white mb-1 h4 pt-2">Saturday: 10:00 AM – 6:00 PM</p>
-                  <p class="text-white h4 pt-2">Sunday: Closed</p>
-                </div>
-      
-                <!-- Contact Info -->
-                <div class="col-12 col-md-4">
-                  <h3 class="text-white mb-3">Say Hello</h3>
-                  <a href="mailto:antojones2003@gmail.com" class="text-white d-block mb-1 h4 pt-3">antojones2003@gmail.com</a>
-                  <p class="text-white mb-0 h4 pt-2">+1 980 563 827 638</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-dark d-flex justify-content-between p-2 bg-white rounded-pill mx-5">
-          <div class="h5">Terms and Conditions</div>
-          <div class="h5">©2024 PBM Infotech</div>
-          <div class="h5">Privacy and Policy</div>
-        </div>
-       </footer>
    
    
    
