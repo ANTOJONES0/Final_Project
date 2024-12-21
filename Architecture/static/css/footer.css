@@ -1,0 +1,62 @@
+footer {
+    background-color: black;
+    padding-top: 40px;
+    border-radius: 15px;
+  }
+  
+  
+  .custom-input::placeholder {
+    color: rgb(233, 220, 220);
+    
+  }
+
+
+  .custom-input {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+  }
+  
+
+  footer h1 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  
+  footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  footer a {
+    color: rgb(192, 16, 16);
+    
+  }
+  
+  
+  
+  
+  @media (max-width: 768px) {
+    .custom-input {
+      width: 100%;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  
+    footer h1 {
+      font-size: 20px;
+    }
+  }
+  
+  
+  
+  .social-icons a {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff0000; 
+  }

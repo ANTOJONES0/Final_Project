@@ -7,6 +7,7 @@
     <title>Service</title>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
@@ -81,10 +82,23 @@
             font-size: 5rem;
           }
 
+          .image-hover-container {
+            border-radius: 10px; 
+            overflow: hidden;
+            transition: transform 0.3s ease; 
+          }
+
+          .image-hover-container :hover {
+            transform: translateY(-10px); 
+          }
+
     </style>
 
 </head>
 <body>
+
+  <!--NAVIGATION-->
+  
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid mb-0">
             <img src="{% static 'image/logo.png' %}" alt="">
@@ -92,7 +106,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 ">
                     <li class="nav-item dropdown me-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Home
@@ -133,13 +147,17 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <button class="btn btn-outline-dark custom-button mt-5 rounded-pill" type="button">Contact Us</button>
+                    <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">Contact Us</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <div class="position-relative resize-img">
+    <div class="container-fluid">
+
+      <!--IMAGE-->
+
+      <div class="position-relative resize-img">
         <img src="{% static 'image/blog11.jpg' %}" alt="Home Image" style="border-radius: 15px;">
 
         <div class="mask text-light d-flex flex-column justify-content-start align-items-center  p-4 mt-5 text-dark">
@@ -151,6 +169,8 @@
 
     <div style="margin-top: 70px;"></div>
 
+    <!--HEADING-->
+
     <div class="container">
       <div class="text-center mt-5">
         <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 100px; margin: 0 auto; letter-spacing: 1px;">
@@ -160,6 +180,141 @@
         <h1 class="custom-font-size fw-bold">‍affordability sustainability.</h1>
       </div>
      </div>
+
+     <!--SERVICES-->
+
+     <div data-aos="fade-up">
+      <div class="p-5">
+        <!-- First Row -->
+        <div class="container project mt-5">
+          <div class="row">
+            <div class="col-12 col-md-4 position-relative">
+              <div class="image-hover-container">
+                <img src="{% static 'image/service1.png' %}" alt="Home Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 position-relative">
+              <div class="image-hover-container">
+                <img src="{% static 'image/service2.png' %}" alt="Home Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 position-relative">
+              <div class="image-hover-container">
+                <img src="{% static 'image/service3.png' %}" alt="Home Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        
+    
+        <!-- Third Row -->
+        <div class="container project mt-5">
+          <div class="row">
+            <div class="col-12 col-md-4 position-relative">
+              <div class="image-hover-container">
+                <img src="{% static 'image/service5.png' %}" alt="Home Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 position-relative">
+              <div class="image-hover-container">
+                <img src="{% static 'image/service6.png' %}" alt="Home Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 position-relative">
+              <div class="image-hover-container">
+                <img src="{% static 'image/service4.png' %}" alt="Home Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <!--FOOTER-->
+
+    <footer style="background-color: black; padding-top: 40px; border-radius: 15px; ">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <!-- First Column -->
+          <div class="col-12 col-sm-12 col-lg-4 text-center text-sm-start mb-4 mb-sm-0">
+            <img src="{% static 'image/logo2.png' %}" alt="Home Image" class="img-fluid" style="height: 100px; width: 50%;">
+            <div class="social-icons  my-4">
+              <a href="https://www.youtube.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-youtube fa-2x"></i>
+              </a>
+              <a href="https://www.facebook.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a href="https://www.twitter.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="text-white">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Second Column -->
+          <div class="col-12 col-sm-8 text-center">
+            <div class="d-flex flex-column flex-md-row pb-5">
+              <h1 class="text-white mb-3 mb-md-0 me-md-3 text-center text-md-start" style="font-size: 40px;">
+                Subscribe to Our <br class="d-none d-md-block"> Newsletter
+              </h1>
+              <div class="d-flex flex-column flex-md-row align-items-center gap-3 ms-5">
+                <input 
+                  type="text" 
+                  placeholder="Enter your mail address" 
+                  class="form-control rounded-pill custom-input p-5" 
+                  style="background-color: black; color: white; caret-color: white; width: 500px;">
+                <button class="btn bg-white text-dark rounded-pill fw-bold p-4" style="width: 100px;">Subscribe Now</button>
+              </div>
+            </div>
+    
+            <hr class="text-white my-4 pb-5">
+    
+            <div class="row text-center text-md-start pb-5">
+              <!-- Useful Links -->
+              <div class="col-12 col-md-4 mb-4">
+                <h3 class="text-white mb-3">Useful Links</h3>
+                <div class="d-flex flex-column align-items-center align-items-md-start gap-2">
+                  <a href="home" class="text-white text-decoration-none h4 pt-3">Home</a>
+                  <a href="about" class="text-white text-decoration-none h4">About</a>
+                  <a href="service" class="text-white text-decoration-none h4">Services</a>
+                  <a href="contact" class="text-white text-decoration-none h4">Contact</a>
+                </div>
+              </div>
+    
+              <!-- Working Time -->
+              <div class="col-12 col-md-4 mb-4">
+                <h3 class="text-white mb-3">Working Time</h3>
+                <p class="text-white mb-1 h4 pt-3">Mon – Fri: 9:00 AM – 5:00 PM</p>
+                <p class="text-white mb-1 h4 pt-2">Saturday: 10:00 AM – 6:00 PM</p>
+                <p class="text-white h4 pt-2">Sunday: Closed</p>
+              </div>
+    
+              <!-- Contact Info -->
+              <div class="col-12 col-md-4">
+                <h3 class="text-white mb-3">Say Hello</h3>
+                <a href="mailto:antojones2003@gmail.com" class="text-white d-block mb-1 h4 pt-3">antojones2003@gmail.com</a>
+                <p class="text-white mb-0 h4 pt-2">+1 980 563 827 638</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-dark d-flex justify-content-between p-2 bg-white rounded-pill mx-5">
+        <div class="h5">Terms and Conditions</div>
+        <div class="h5">©2024 PBM Infotech</div>
+        <div class="h5">Privacy and Policy</div>
+      </div>
+     </footer>
+
+
+    </div>
 
 
     

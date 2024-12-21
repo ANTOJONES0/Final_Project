@@ -7,8 +7,10 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -100,6 +102,69 @@
             font-size: 5rem;
           }
 
+          .img-fluid {
+            max-width: 100%;
+            height: auto;
+          }
+          .custom-button {
+            padding: 0.5rem 1.5rem;
+          }
+          
+        .card{  
+          overflow: hidden; 
+          transition: transform 0.3s, box-shadow 0.3s; 
+        }
+        
+        .card:hover {
+          transform: translateY(-10px); 
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+        }
+
+        ol li{
+          font-size: 20px;
+        }
+
+        
+
+        
+
+        .photo{
+          margin: 100px 0 0 200px;
+          width: 70%;
+          height: 450px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .photo img{
+          width: 10%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+          transition: all ease-in-out 0.5s;
+        }
+
+        .photo img:hover{
+          width: 25%;
+        }
+
+        .cards-l a{
+          text-decoration: none;
+          color: black;
+          
+        }
+
+        .card-l{
+          border-radius: 20px;
+        }
+
+
+        
+      
+
+       
+
 
     </style>
 </head>
@@ -186,37 +251,86 @@
       <div style="margin-top: 100px;"></div>
 
 
-      <!-- GUARANTEE -->
+      <!--CARDS 1-->
 
-      <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <img src="{% static 'image/guar.png' %}" alt="">
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-12 col-sm-6  col-xl-3">
+            <div class="card p-4" style="border-radius: 20px; height:40rem;">
+              <img class="card-img-top" src="{% static 'image/home31.png' %}" alt="Card image cap"><br>
+              <div class="card-body">
+                <hr><br>
+                <p class="card-text" style="font-size: 20px;">Nullam porta enim vel tellus commodo eget laoreet odio ultrices.Nullam porta enim vel tellus commodo eget laoreet odio ultrices.</p>
+              </div>
             </div>
-            <div class="col-12">
-                <h6 class="rounded-pill p-1" style="background-color: rgb(212, 209, 209); width:60px">Since 1986</h6>
-                <h1 class="display-5 fw-bold">We reach beyond established</h1>
-                <h1 class="display-5 fw-bold">trends solutions.</h1>
-                <p class="mt-4" style="font-size: 15px;">
-                    We create stylish and comfortable interior design project of studio is made. <br> Mauris tempus nisl vitae magna pulvinar laoreet. Nullam erat ipsum, mattis <br>nec mollis ac, accumsan a enim.Mauris tempus nisl vitae.
-                </p>
-                <div>
-                    <ul>
-                        <li>Construction Planning According to the opinion</li>
-                        <li>Project Analysis habits and nature of the person</li>
-                        <li>Smart House System experience of work with different</li>
-                    </ul>
-                </div>
-                <form role="search">
-                    <a href="aboutus" class="text-decoration-none ">
-                      <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
-                        Read More
-                      </button>
-                    </a>
-                  </form>
+          </div>
+          <div class="col-12 col-sm-6  col-xl-3">
+            <div class="card p-4" style="border-radius: 20px; height:40rem;">
+              <img class="card-img-top" src="{% static 'image/home32.png' %}" alt="Card image cap"><br>
+              <div class="card-body">
+                <hr><br>
+                <p class="card-text" style="font-size: 20px;">Nullam porta enim vel tellus commodo eget laoreet odio ultrices.Nullam porta enim vel tellus commodo eget laoreet odio ultrices.</p>
+              </div>
             </div>
+          </div>
+          <div class="col-12 col-sm-6  col-xl-3">
+            <div class="card p-4" style="border-radius: 20px; height:40rem;">
+              <img class="card-img-top" src="{% static 'image/home33.png' %}" alt="Card image cap"><br>
+              <div class="card-body">
+                <hr><br>
+                <p class="card-text" style="font-size: 20px;">Nullam porta enim vel tellus commodo eget laoreet odio ultrices.Nullam porta enim vel tellus commodo eget laoreet odio ultrices.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6  col-xl-3">
+            <div class="card p-4" style="border-radius: 20px; height:40rem;">
+              <img class="card-img-top" src="{% static 'image/home34.png' %}" alt="Card image cap"><br>
+              <div class="card-body">
+                <hr><br>
+                <p class="card-text" style="font-size: 20px;">Nullam porta enim vel tellus commodo eget laoreet odio ultrices.Nullam porta enim vel tellus commodo eget laoreet odio ultrices.  </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      
+
+      <div style="margin-top: 100px;"></div>
+
+
+      <!-- GUARANTEE -->
+
+      <div class="container-fluid">
+        <div class="row d-flex align-items-center" >
+          <div class="col-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <img src="{% static 'image/guar.png' %}" alt="" class="img-fluid">
+          </div>
+          <div class="col-12 col-xl-6" data-aos="fade-right">
+            <h6 class="rounded-pill p-1" style="background-color: rgb(212, 209, 209); width: 60px;">Since 1986</h6>
+            <h1 class="display-5 fw-bold" style="font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              We reach beyond established
+            </h1>
+            <h1 class="display-5 fw-bold" style="font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              trends solutions.
+            </h1>
+            <p class="mt-4 h4" style="line-height: 26px; font-size: 18px; color: rgb(115, 113, 120); margin-left:10rem;">
+              We create stylish and comfortable interior design project of studio is made. Mauris tempus nisl vitae magna pulvinar laoreet. Nullam erat ipsum, mattis nec mollis ac, accumsan a enim. Mauris tempus nisl vitae.
+            </p><br>
+            <ul class="h4" style="color: rgb(115, 113, 120); font-size: 18px; margin-left:12rem;">
+              <li>Construction Planning According to the opinion</li><br>
+              <li>Project Analysis habits and nature of the person</li><br>
+              <li>Smart House System experience of work with different</li><br>
+            </ul>
+            <a href="aboutus" class="text-decoration-none">
+              <button class=" btn-outline-dark text-dark custom-button rounded-pill" style="margin-left: 12rem;">
+                Read More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      
 
 
       <!-- MARQUEE -->
@@ -229,6 +343,21 @@
         </marquee>
       </div>
 
+      <div style="margin-top: 100px;"></div>
+
+      <!--PHOTOS
+      
+      <div class="image-hover-container">
+                <img class="d-block w-100 carousel-img mx-3" src="{% static 'image/project2.png' %}" alt="Second slide">
+                <div class="hover-message">
+                  <p>EXCAVATION</p>
+                  <h4>Modular Modern Farmwork</h4>
+                </div>
+              </div>-->
+
+     
+    
+
 
       <!-- DESIGN -->
        
@@ -240,15 +369,535 @@
         <h1 class="custom-font-size fw-bold">affordability sustainability.</h1>
       </div>
 
+      
+      <div style="margin-top: 100px;"></div>
+
+      <!--Cards 2-->
+
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="row">
+          <!-- Sustainable Building -->
+          <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4 ">
+            <div class="d-flex">
+              <img src="{% static 'image/serve1.png' %}" alt="Image" class="img-fluid">
+              <div class="ps-3">
+                <h1>Sustainable Building</h1>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Innovation & Remodeling -->
+          <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+            <div class="d-flex">
+              <img src="{% static 'image/serve22.png' %}" alt="Image" class="img-fluid">
+              <div class="ps-3">
+                <h1>Innovation & Remodeling</h1>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Custom Construction -->
+          <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+            <div class="d-flex">
+              <img src="{% static 'image/serve3.png' %}" alt="Image" class="img-fluid">
+              <div class="ps-3">
+                <h1>Custom Construction</h1>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Spacer -->
+          <div class="w-100" style="margin-top: 90px;"></div>
+          <!-- Project Management -->
+          <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+            <div class="d-flex">
+              <img src="{% static 'image/serve4.png' %}" alt="Image" class="img-fluid">
+              <div class="ps-3">
+                <h1>Project Management</h1>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Design and Planning -->
+          <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+            <div class="d-flex">
+              <img src="{% static 'image/serve5.png' %}" alt="Image" class="img-fluid">
+              <div class="ps-3">
+                <h1>Design and Planning</h1>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Furniture & Decor -->
+          <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+            <div class="d-flex">
+              <img src="{% static 'image/serve6.png' %}" alt="Image" class="img-fluid">
+              <div class="ps-3">
+                <h1>Furniture & Decor</h1>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div style="margin-top: 100px;"></div>
+
+      <hr>
+
+      <div style="margin-top: 100px;"></div>
+
+
+      <!--NUMBERS-->
+
+      <div class="container-fluid">
+        <div class="row text-center">
+          <!-- YEARS EXPERIENCE -->
+          <div class="col-6 col-md-3 mb-4">
+            <h1 class="fw-bolder text-muted" style="font-size: 100px;">15</h1>
+            <h6 style="font-size: 15px;">YEARS EXPERIENCE</h6>
+          </div>
+          <!-- EXPERT PARTNERS -->
+          <div class="col-6 col-md-3 mb-4">
+            <h1 class="fw-bolder text-muted" style="font-size: 100px;">36</h1>
+            <h6 style="font-size: 15px;">YEARS EXPERIENCE</h6>
+          </div>
+          <!-- HAPPY CUSTOMERS -->
+          <div class="col-6 col-md-3 mb-4">
+            <h1 class="fw-bolder text-muted" style="font-size: 100px;">100</h1>
+            <h6 style="font-size: 15px;">HAPPY CUSTOMERS</h6>
+          </div>
+          <!-- ACTIVE PROJECTS -->
+          <div class="col-6 col-md-3 mb-4">
+            <h1 class="fw-bolder text-muted" style="font-size: 100px;">20</h1>
+            <h6 style="font-size: 15px;">ACTIVE PROJECTS</h6>
+          </div>
+        </div>
+      </div>
+      
+
+      <div style="margin-top: 100px;"></div>
+
+
+      <!--FEEDBACK-->
+
+      <div class="container-fluid" style="background-color: rgb(252, 248, 248); border-radius:15px; padding:10px;">
+        <div class="text-center mt-5" data-aos="fade-up">
+          <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 150px; margin: 0 auto; letter-spacing: 1px;">
+            TRUSTED EXPERIENCE
+          </h6>
+          <h1 class="custom-font-size fw-bold">Wants our client's</h1>
+          <h1 class="custom-font-size fw-bold">have to say.</h1>
+        </div>
+
+        <div style="margin-top: 100px;"></div>
+
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
+              <img src="{% static 'image/feed1.png' %}" alt="" class="img-fluid" style="max-width: 100%;">
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
+              <img src="{% static 'image/feed2.png' %}" alt="" class="img-fluid" style="max-width: 100%;">
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
+              <img src="{% static 'image/feed3.png' %}" alt="" class="img-fluid" style="max-width: 100%;">
+            </div>
+          </div>
+        </div>
+        
+      
+        
+      </div>
+
       <!-- MARQUEE STICKERS -->
 
       <div class="mt-5" >
         <marquee behavior="scroll" direction="left" scrollamount="10" data-aos="fade-up">
-          <div>>
+          <div>
             <h1 class="marquee-text"> <img src="{% static 'image/sticker1.png' %}"><img src="{% static 'image/sticker2.png' %}"> <img src="{% static 'image/sticker3.png' %}">  <img src="{% static 'image/sticker4.png' %}"> <img src="{% static 'image/sticker5.png' %}"> <img src="{% static 'image/sticker6.png' %}"><img src="{% static 'image/sticker7.png' %}"> <img src="{% static 'image/sticker8.png' %}"> <img src="{% static 'image/sticker9.png' %}"> <img src="{% static 'image/sticker10.png' %}">  <img src="{% static 'image/sticker1.png' %}"><img src="{% static 'image/sticker2.png' %}"> <img src="{% static 'image/sticker3.png' %}">  <img src="{% static 'image/sticker4.png' %}"> <img src="{% static 'image/sticker5.png' %}"> <img src="{% static 'image/sticker6.png' %}"><img src="{% static 'image/sticker7.png' %}"> <img src="{% static 'image/sticker8.png' %}"> <img src="{% static 'image/sticker9.png' %}"> <img src="{% static 'image/sticker10.png' %}"></h1>
           </div>
         </marquee>
         <hr class="text-dark ">
+      </div>
+
+      <div style="margin-top: 100px;"></div>
+
+      
+
+
+      <!--PRICE-->
+
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12 col-xl-4">
+            <div class=" mt-5" data-aos="fade-up">
+              <h6 class="rounded-pill p-2 mt-5" style="background-color: rgb(211, 203, 203); width: 95px;  letter-spacing: 1px;">
+                PRICING TABLE
+              </h6>
+              <h1 class="custom-font-size fw-bold">The best pricing to</h1>
+              <h1 class="custom-font-size fw-bold">help you!</h1><br>
+              <h4 style="line-height: 25px;">We carefully screen all of our cleaners, so you can rest <br>assured that your home would receive the absolute <br>highest quality of service providing.</h4>
+            </div>
+          </div>
+          
+          <div class="col-md-12 col-xl-8">
+            <div class="cards">
+              
+              
+              <!--CARD 1-->
+
+
+              <div class="card p-5" style="border-radius: 20px;">
+                <h2 style="font-size: 20px;">Small Business</h2>
+                <div class="d-flex justify-content-start"  style="size: 50px;"></div>
+                <div class="row">
+                  <div class="col-md-4 d-flex justify-content-start">
+                    
+                    <div>
+                      <h1 style="font-size: 50px;">$ <span style="font-size: 70px;" class="fw-bolder">299</span> <span style="font-size:50px;" class="me-5">/mon</span></h1>
+                    </div>
+                    <div style="width: 2px; height: 190px; background-color: rgb(20, 19, 19);" class="me-5 d-none d-md-block"></div>
+
+                    
+                  </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          <li><i class="fas fa-check "></i> Planning & Design </li><br>
+                          <li style="padding-left: 24px;">Unlimited Consultations</li><br>
+                          <li><i class="fas fa-check "></i> Architecture & Design</li>
+                        </ol>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          
+                          <li style="padding-left: 24px;">Room Design Included</li><br>
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                      <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
+                        <div>
+                          <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                    
+                    
+                </div>
+              </div>
+
+              <br><br>
+
+              <!--CARD 2-->
+
+              
+              <div class="card p-5 bg-dark" style="border-radius: 20px; ">
+                <h2 style="font-size: 20px; color:white">Small Business</h2>
+                <div class="d-flex justify-content-start"  style="size: 50px;"></div>
+                <div class="row">
+                  <div class="col-md-4 d-flex justify-content-start">
+                    
+                    <div class="text-white">
+                      <h1 style="font-size: 50px;">$ <span style="font-size: 70px;" class="fw-bolder">345</span> <span style="font-size:50px;" class="me-5">/mon</span></h1>
+                    </div>
+                    <div style="width: 2px; height: 190px; background-color: rgb(255, 255, 255);" class="me-5 d-none d-md-block"></div>
+
+                    
+                  </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0; " class="ps-5 text-white">
+                          <li><i class="fas fa-check "></i> Planning & Design </li><br>
+                          <li><i class="fas fa-check "></i> Unlimited Consultations</li><br>
+                          <li><i class="fas fa-check "></i> Architecture & Design</li>
+                        </ol>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0; " class="ps-5 text-white">
+                          
+                          <li style="padding-left: 24px;">Room Design Included</li><br>
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                      <button class="bg-white p-3 " style="width: fit-content; border-radius: 15px;">
+                        <div>
+                          <a href="pricingplan" class="text-dark" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                    
+                    
+                </div>
+              </div>
+
+              <br><br>
+
+              <!--CARD 3-->
+
+
+              <div class="card p-5" style="border-radius: 20px;">
+                <h2 style="font-size: 20px;">Small Business</h2>
+                <div class="d-flex justify-content-start"  style="size: 50px;"></div>
+                <div class="row">
+                  <div class="col-md-4 d-flex justify-content-start">
+                    
+                    <div>
+                      <h1 style="font-size: 50px;">$ <span style="font-size: 70px;" class="fw-bolder">540</span> <span style="font-size:50px;" class="me-5">/mon</span></h1>
+                    </div>
+                    <div style="width: 2px; height: 190px; background-color: rgb(20, 19, 19);" class="me-5 d-none d-md-block"></div>
+
+                    
+                  </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          <li><i class="fas fa-check "></i> Planning & Design </li><br>
+                          <li><i class="fas fa-check "></i> Unlimited Consultations</li><br>
+                          <li><i class="fas fa-check "></i> Architecture & Design</li>
+                        </ol>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol style="list-style: none; padding: 0;" class="ps-5">
+                          
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Room Design Included</li>
+                          <li><i class="fas fa-check " style="margin-right: 5px;"></i>Interior Design</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                      <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
+                        <div>
+                          <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                    
+                    
+                </div>
+              </div>
+
+
+                
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+
+      <!--LATEST NEWS-->
+
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="mt-5">
+          <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 80px;  letter-spacing: 1px;">
+            LATEST POST
+          </h6>
+          <h1 class="custom-font-size fw-bold">Read our latest news</h1>
+          <h1 class="custom-font-size fw-bold">be always in trend</h1>
+          <form role="search">
+            <a href="project" class="text-decoration-none ">
+              <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
+                Take a Look
+              </button>
+            </a>
+          </form>
+        </div>
+        
+
+        
+
+
+
+
+      </div>
+
+      
+
+      <!--CARDS-->
+
+      <div class="cards cards-l mt-5 ">
+
+
+        <div class="row d-flex justify-content-center">
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend1.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>Tips for planning a project architecture</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend2.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>Minimalist design of Architect  Ruffalo</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px;"></div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend3.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>Madars Homestay: Uncomplicated yet Effective</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-l p-4">
+              <a href="">
+                <div class="card-content card-content-l">
+                  <div class="row -flex justify-content-center">
+                    <div class="col">
+                      <img src="{% static 'image/home3trend4.png' %}" alt="Home Image">
+                    </div>
+                    <div class="col d-flex align-items-center ">
+                      <h1>New government UK rules about living in forest</h1>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+         
+
+        
+        
+      </div>
+
+      <div>
+        <!--FOOTER-->
+
+        <footer style="background-color: black; padding-top: 40px; border-radius: 15px; ">
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <!-- First Column -->
+              <div class="col-12 col-sm-12 col-lg-4 text-center text-sm-start mb-4 mb-sm-0">
+                <img src="{% static 'image/logo2.png' %}" alt="Home Image" class="img-fluid" style="height: 100px; width: 50%;">
+                <div class="social-icons  my-4">
+                  <a href="https://www.youtube.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-youtube fa-2x"></i>
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-facebook fa-2x"></i>
+                  </a>
+                  <a href="https://www.twitter.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-twitter fa-2x"></i>
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank" class="text-white">
+                    <i class="fab fa-instagram fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+        
+              <!-- Second Column -->
+              <div class="col-12 col-sm-8 text-center">
+                <div class=" row d-flex flex-column flex-md-row pb-5">
+                  <div class="col">
+                    <h1 class="text-white mb-3 mb-md-0 me-md-3 text-center text-md-start" style="font-size: 40px;">
+                      Subscribe to Our <br class="d-none d-md-block"> Newsletter
+                    </h1>
+                  </div>
+                  <div class="col d-flex flex-column flex-md-row align-items-center gap-3 ms-5">
+                    
+                      <input 
+                        type="text" 
+                        placeholder="Enter your mail address" 
+                        class="form-control rounded-pill custom-input p-5" 
+                        style="background-color: black; color: white; caret-color: white; width: 500px;">
+                      <button class="btn bg-white text-dark rounded-pill fw-bold p-4" style="width: 100px;">Subscribe Now</button>
+                    
+                  </div>
+                </div>
+        
+                <hr class="text-white my-4 pb-5">
+        
+                <div class="row text-center text-md-start pb-5">
+                  <!-- Useful Links -->
+                  <div class="col-12 col-md-4 mb-4">
+                    <h3 class="text-white mb-3">Useful Links</h3>
+                    <div class="d-flex flex-column align-items-center align-items-md-start gap-2">
+                      <a href="home" class="text-white text-decoration-none h4 pt-3">Home</a>
+                      <a href="about" class="text-white text-decoration-none h4">About</a>
+                      <a href="service" class="text-white text-decoration-none h4">Services</a>
+                      <a href="contact" class="text-white text-decoration-none h4">Contact</a>
+                    </div>
+                  </div>
+        
+                  <!-- Working Time -->
+                  <div class="col-12 col-md-4 mb-4">
+                    <h3 class="text-white mb-3">Working Time</h3>
+                    <p class="text-white mb-1 h4 pt-3">Mon – Fri: 9:00 AM – 5:00 PM</p>
+                    <p class="text-white mb-1 h4 pt-2">Saturday: 10:00 AM – 6:00 PM</p>
+                    <p class="text-white h4 pt-2">Sunday: Closed</p>
+                  </div>
+        
+                  <!-- Contact Info -->
+                  <div class="col-12 col-md-4">
+                    <h3 class="text-white mb-3">Say Hello</h3>
+                    <a href="mailto:antojones2003@gmail.com" class="text-white d-block mb-1 h4 pt-3">antojones2003@gmail.com</a>
+                    <p class="text-white mb-0 h4 pt-2">+1 980 563 827 638</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="text-dark d-flex justify-content-between p-2 bg-white rounded-pill mx-5">
+            <div class="h5">Terms and Conditions</div>
+            <div class="h5">©2024 PBM Infotech</div>
+            <div class="h5">Privacy and Policy</div>
+          </div>
+         </footer>
       </div>
 
 
@@ -259,10 +908,10 @@
        
    
    
+      
+     
    
-   
-   
-   
+      
    
    
    
