@@ -17,6 +17,11 @@ footer {
     padding: 10px;
   }
   
+  .custom-input::placeholder {
+    color: white;
+    opacity: 1;
+  }
+  
 
   footer h1 {
     font-size: 24px;
