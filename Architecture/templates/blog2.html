@@ -352,7 +352,7 @@
         <div class="container text-center">
           <div class="row align-items-center">
             <!-- First Column -->
-            <div class="col-12 col-md-4 text-center text-sm-start mb-4 mb-sm-0">
+            <div class="col-12 col-md-3 text-center text-sm-start mb-4 mb-sm-0">
               <img src="{% static 'image/logo2.png' %}" alt="Home Image" class="img-fluid" style="height: 100px; width: 50%;">
               <div class="social-icons  my-4">
                 <a href="https://www.youtube.com" target="_blank" class="text-white me-3">
@@ -369,29 +369,37 @@
                 </a>
               </div>
             </div>
-
+      
             <!-- Second Column -->
-            <div class="col-12 col-md-8 text-center">
+            <div class="col-12 col-md-9 text-center">
               <div class=" row d-flex flex-column flex-md-row pb-5">
                 <div class="col">
                   <h1 class="text-white mb-3 mb-md-0 me-md-3 text-center text-md-start" style="font-size: 40px;">
                     Subscribe to Our <br class="d-none d-md-block"> Newsletter
                   </h1>
                 </div>
-                <div class="col d-flex flex-column flex-md-row align-items-center gap-3 ms-5">
-                  
-                    <input 
-                      type="text" 
-                      placeholder="Enter your mail address" 
-                      class="form-control rounded-pill custom-input p-5 d-flex justify-content-start" 
-                      style="background-color: black; color: white; caret-color: white; width: 500px;">
-                    <button class="btn bg-white text-dark rounded-pill fw-bold p-4 d-flex justify-content-start" style="width: 100px;">Subscribe Now</button>
-                  
+                
+                <div class="col d-flex flex-column flex-md-row align-items-center gap-3 ms-5" id="footerMail">
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Enter your email address" 
+                    class="form-control rounded-pill custom-input p-5 d-flex justify-content-start" 
+                    id="emailInput"
+                    style="background-color: black; color: white; caret-color: white; width: 500px;"
+                    aria-label="Email Address">
+                  <button 
+                    class="btn bg-white text-dark rounded-pill fw-bold p-4 d-flex justify-content-start" 
+                    id="footerBtn" 
+                    style="width: 100px;">
+                    Subscribe Now
+                  </button>
                 </div>
+                
               </div>
-
+      
               <hr class="text-white my-4 pb-5">
-
+      
               <div class="row text-center text-md-start pb-5">
                 <!-- Useful Links -->
                 <div class="col-12 col-md-4 mb-4">
@@ -403,7 +411,7 @@
                     <a href="contact" class="text-white text-decoration-none h4">Contact</a>
                   </div>
                 </div>
-
+      
                 <!-- Working Time -->
                 <div class="col-12 col-md-4 mb-4">
                   <h3 class="text-white mb-3">Working Time</h3>
@@ -411,7 +419,7 @@
                   <p class="text-white mb-1 h4 pt-2">Saturday: 10:00 AM – 6:00 PM</p>
                   <p class="text-white h4 pt-2">Sunday: Closed</p>
                 </div>
-
+      
                 <!-- Contact Info -->
                 <div class="col-12 col-md-4">
                   <h3 class="text-white mb-3">Say Hello</h3>
@@ -428,7 +436,7 @@
           <div class="h5">©2024 PBM Infotech</div>
           <div class="h5">Privacy and Policy</div>
         </div>
-      </footer>
+       </footer>
       
       
     </div>
