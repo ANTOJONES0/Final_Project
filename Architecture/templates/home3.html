@@ -14,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+
         body {
             margin-left: 25px;
             margin-right: 25px;
@@ -151,6 +152,9 @@
           width: 25%;
         }
 
+
+        /*CARDS*/
+
         .cards-l a{
           text-decoration: none;
           color: black;
@@ -161,8 +165,22 @@
           border-radius: 20px;
         }
 
+
+        /*Award*/
+
+        .awardp p{
+          font-size: 5rem;
+        }
+
+        .award{
+          border-radius: 20px;
+        }
+
+
+          
+
         
-      
+        /*FOOTER*/
 
         .custom-input::placeholder {
           color: white;
@@ -229,6 +247,8 @@
 
 
     </style>
+
+
 </head>
 <body>
 
@@ -248,9 +268,9 @@
                             Home
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="home1">Home Page 1</a></li>
-                            <li><a class="dropdown-item" href="#">Home Page 2</a></li>
-                            <li><a class="dropdown-item" href="#">Home Page 3</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown me-3">
@@ -258,9 +278,9 @@
                             Pages
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="aboutus">About Us</a></li>
-                            <li><a class="dropdown-item" href="ourteam">Our Team</a></li>
-                            <li><a class="dropdown-item" href="pricingplan">Pricing Plan</a></li>
+                            <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
+                            <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
                         </ul>
                     </li>
                     <li class="nav-item me-3">
@@ -274,12 +294,12 @@
                             Blog
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="blog1">Blog 1</a></li>
-                            <li><a class="dropdown-item" href="blog2">Blog 2</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact</a>
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -764,6 +784,66 @@
       </div>
 
 
+      <!--AWARD-->
+
+      <div class="row " style="margin-top: 130px;">
+        <div class="col-xl-6 px-5">
+          <img src="{% static 'image/awardimage.jpg' %}" alt="Image" class="img-fluid w-100 h-100" style="border-radius: 20px;">
+        </div>
+        <div class="col-xl-6 bg-dark container p-5 award">
+          <div style="margin-top: 10px;"></div>
+          <div class="ps-5 mt-5" style="margin-left: 30px;">
+            <h5 class="rounded-pill p-2 mt-5" style="background-color: rgb(211, 203, 203); width: 90px;  letter-spacing: 1px;">
+              SINCE 1986
+            </h5>
+            <div class="awardp ">
+              <p class="h1 text-white">We are an Award  </p>
+              <p class="h1 text-white">Winning Interior</p>
+              <p class="h1 text-white">Design Studio</p>
+            </div>
+
+            <div class="text-white h3 " style="padding-left: 40px; padding-top:60px">
+              <p>Understanding the extension and the tasks’ aspirations,</p>
+              <p>and through paying attention to customers, clients, and</p>
+              <p>project workers assist us with welling plan arrangements.</p>
+            </div>
+            <div class="d-flex justify-content-around text-white h3 pt-5">
+              <p>2010</p>
+              <p>The Design Awards</p>
+              <p >INTERIOR </p>
+              <a href="aboutus"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="pt-2 text-white" >
+              <hr>
+            </div>
+
+            <div class="d-flex justify-content-around text-white h3 pt-5">
+              <p>2015</p>
+              <p>Star Winner Award</p>
+              <p >INTERIOR </p>
+              <a href="aboutus"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="pt-2 text-white">
+              <hr>
+            </div>
+
+            <div class="d-flex justify-content-around text-white h3 pt-5">
+              <p>2019</p>
+              <p>Best Design of Year</p>
+              <p >INTERIOR </p>
+              <a href="aboutus"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="pt-2 text-white">
+              <hr>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="margin-top: 100px;"></div>
+
+
 
       <!--LATEST NEWS-->
 
@@ -807,9 +887,15 @@
                     <div class="col">
                       <img src="{% static 'image/home3trend1.png' %}" alt="Home Image">
                     </div>
-                    <div class="col d-flex align-items-center ">
-                      <h1>Tips for planning a project architecture</h1>
+                    <div class="col text-center">
+                      <div class="mb-3" style="margin-top: 50px;"> 
+                        <img src="{% static 'image/calimg1.png' %}" alt="Home Image" class="img-fluid">
+                      </div>
+
+                      <h1 class="mt-5">Tips for planning a project architecture</h1>
                     </div>
+                    
+                    
                   </div>
                 </div>
               </a>
@@ -823,8 +909,12 @@
                     <div class="col">
                       <img src="{% static 'image/home3trend2.png' %}" alt="Home Image">
                     </div>
-                    <div class="col d-flex align-items-center ">
-                      <h1>Minimalist design of Architect  Ruffalo</h1>
+                    <div class="col text-center">
+                      <div class="mb-3" style="margin-top: 50px;"> 
+                        <img src="{% static 'image/calimg2.png' %}" alt="Home Image" class="img-fluid">
+                      </div>
+
+                      <h1 class="mt-5">Minimalist design of Architect  Ruffalo</h1>
                     </div>
                   </div>
                 </div>
@@ -844,8 +934,12 @@
                     <div class="col">
                       <img src="{% static 'image/home3trend3.png' %}" alt="Home Image">
                     </div>
-                    <div class="col d-flex align-items-center ">
-                      <h1>Madars Homestay: Uncomplicated yet Effective</h1>
+                    <div class="col text-center">
+                      <div class="mb-3" style="margin-top: 50px;"> 
+                        <img src="{% static 'image/calimg3.png' %}" alt="Home Image" class="img-fluid">
+                      </div>
+
+                      <h1 class="mt-5">Madars Homestay: Uncomplicated yet Effective</h1>
                     </div>
                   </div>
                 </div>
@@ -860,8 +954,12 @@
                     <div class="col">
                       <img src="{% static 'image/home3trend4.png' %}" alt="Home Image">
                     </div>
-                    <div class="col d-flex align-items-center ">
-                      <h1>New government UK rules about living in forest</h1>
+                    <div class="col text-center">
+                      <div class="mb-3" style="margin-top: 50px;"> 
+                        <img src="{% static 'image/calimg4.png' %}" alt="Home Image" class="img-fluid">
+                      </div>
+
+                      <h1 class="mt-5">New government UK rules about living in forest</h1>
                     </div>
                   </div>
                 </div>

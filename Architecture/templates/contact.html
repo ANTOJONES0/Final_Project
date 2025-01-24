@@ -274,55 +274,55 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
-                      <li class="nav-item dropdown me-3">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Home
-                          </a>
-                          <ul class="dropdown-menu custom-dropdown">
-                              <li><a class="dropdown-item" href="#">Home Page 1</a></li>
-                              <li><a class="dropdown-item" href="#">Home Page 2</a></li>
-                              <li><a class="dropdown-item" href="#">Home Page 3</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item dropdown me-3">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Pages
-                          </a>
-                          <ul class="dropdown-menu custom-dropdown">
-                              <li><a class="dropdown-item" href="#">About Us</a></li>
-                              <li><a class="dropdown-item" href="#">Our Team</a></li>
-                              <li><a class="dropdown-item" href="#">Pricing Plan</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item me-3">
-                          <a class="nav-link" href="#">Services</a>
-                      </li>
-                      <li class="nav-item me-3">
-                          <a class="nav-link" href="#">Projects</a>
-                      </li>
-                      <li class="nav-item dropdown me-3">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Blog
-                          </a>
-                          <ul class="dropdown-menu custom-dropdown">
-                              <li><a class="dropdown-item" href="#">Blog 1</a></li>
-                              <li><a class="dropdown-item" href="#">Blog 2</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Contact</a>
-                      </li>
-                  </ul>
-                  <form class="d-flex" role="search">
-                      <a href="contact" class="text-decoration-none">
-                          <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
-                              Contact Us
-                          </button>
-                      </a>
-                  </form>
-              </div>
+              <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
+                            <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="{% url 'service' %}">Services</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="{% url 'project' %}">Projects</a>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <a href="contact" class="text-decoration-none">
+                      <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
+                          Contact Us
+                      </button>
+                  </a>
+                </form>
+            </div>
           </div>
         </nav>
 
@@ -424,32 +424,33 @@
       <!-- Right Column (Form) -->
       <div class="col-lg-7 ps-5 p-5" style="background-color: rgb(245, 243, 243); border-radius:10px">
         <div>
-          <h1 style="font-size: 40px;" class="pt-5">Send us a Message</h1><br>
-          <form method="POST" autocomplete="off">
-            {% csrf_token %}
-            <div id="footerMail">
-              <div>
-                <textarea name="message" id="" rows="5" placeholder="Message" class="messagearea pt-5" ></textarea>
-              </div>
-              <div class="input2 d-flex justify-content-start pt-4 flex-column flex-lg-row">
-                <input type="text" placeholder="Company Name" class="rounded-pill" name="company">
-                <div class=" ps-1 pt-3 pt-lg-0">
-                  <input type="text" placeholder="Place Name" class="rounded-pill" name="place">
+            <h1 style="font-size: 40px;" class="pt-5">Send us a Message</h1><br>
+            <form method="POST" autocomplete="off" id="dataForm" action="/your-submit-url/">
+                {% csrf_token %}
+                <div id="footerMail">
+                    <div>
+                        <textarea name="message" id="" rows="5" placeholder="Message" class="messagearea pt-5"></textarea>
+                    </div>
+                    <div class="input2 d-flex justify-content-start pt-4 flex-column flex-lg-row">
+                        <input type="text" placeholder="Company Name" class="rounded-pill" name="company">
+                        <div class="ps-1 pt-3 pt-lg-0">
+                            <input type="text" placeholder="Place Name" class="rounded-pill" name="place">
+                        </div>
+                    </div>
+                    <div class="input2 d-flex justify-content-start pt-4 flex-column flex-lg-row">
+                        <input type="text" placeholder="Email Address" id="emailInput" class="rounded-pill" name="email">
+                        <div class="ps-1 pt-3 pt-lg-0">
+                            <input type="text" placeholder="Phone Number" class="rounded-pill" name="phone">
+                        </div>
+                    </div>
+                    <div class="btn ps-5 pt-5">
+                        <button type="submit" id="footerBtn">Submit</button>
+                    </div>
                 </div>
-              </div>
-              <div class="input2 d-flex justify-content-start pt-4 flex-column flex-lg-row">
-                <input type="text" placeholder="Email Address" id="emailInput" class="rounded-pill" name="email">
-                <div class="ps-1 pt-3 pt-lg-0">
-                  <input type="text" placeholder="Phone Number" class="rounded-pill" name="phone">
-                </div>
-              </div>
-              <div class="btn ps-5 pt-5" id="footerBtn">
-                <input type="submit" value="Submit" >
-              </div>
-            </div>
-          </form>
+            </form>
         </div>
-      </div>
+    </div>
+    
     </div>
   </div>
 
