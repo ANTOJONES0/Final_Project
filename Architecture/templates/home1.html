@@ -355,9 +355,9 @@
                             Home
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="home1">Home Page 1</a></li>
-                            <li><a class="dropdown-item" href="home2">Home Page 2</a></li>
-                            <li><a class="dropdown-item" href="home3">Home Page 3</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown me-3">
@@ -365,28 +365,28 @@
                             Pages
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="aboutus">About Us</a></li>
-                            <li><a class="dropdown-item" href="ourteam">Our Team</a></li>
-                            <li><a class="dropdown-item" href="pricingplan">Pricing Plan</a></li>
+                            <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
+                            <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
                         </ul>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link" href="service">Services</a>
+                        <a class="nav-link" href="{% url 'service' %}">Services</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link" href="project">Projects</a>
+                        <a class="nav-link" href="{% url 'project' %}">Projects</a>
                     </li>
                     <li class="nav-item dropdown me-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Blog
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="blog1">Blog 1</a></li>
-                            <li><a class="dropdown-item" href="blog2">Blog 2</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact</a>
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">

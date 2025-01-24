@@ -261,50 +261,54 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Home
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="#">Home Page 1</a></li>
-                            <li><a class="dropdown-item" href="#">Home Page 2</a></li>
-                            <li><a class="dropdown-item" href="#">Home Page 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Pages
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="#">About Us</a></li>
-                            <li><a class="dropdown-item" href="#">Our Team</a></li>
-                            <li><a class="dropdown-item" href="#">Pricing Plan</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="#">Projects</a>
-                    </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Blog
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="#">Blog 1</a></li>
-                            <li><a class="dropdown-item" href="#">Blog 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-dark custom-button mt-5 rounded-pill" type="button">Contact Us</button>
-                </form>
-            </div>
+              <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
+                  <li class="nav-item dropdown me-3">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Home
+                      </a>
+                      <ul class="dropdown-menu custom-dropdown">
+                          <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
+                          <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
+                          <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item dropdown me-3">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Pages
+                      </a>
+                      <ul class="dropdown-menu custom-dropdown">
+                          <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
+                          <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
+                          <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item me-3">
+                      <a class="nav-link" href="{% url 'service' %}">Services</a>
+                  </li>
+                  <li class="nav-item me-3">
+                      <a class="nav-link" href="{% url 'project' %}">Projects</a>
+                  </li>
+                  <li class="nav-item dropdown me-3">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Blog
+                      </a>
+                      <ul class="dropdown-menu custom-dropdown">
+                          <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
+                          <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                  </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <a href="contact" class="text-decoration-none">
+                    <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
+                        Contact Us
+                    </button>
+                </a>
+              </form>
+          </div>
         </div>
       </nav>
 
