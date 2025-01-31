@@ -316,7 +316,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <a href="contact" class="text-decoration-none">
+                  <a href="{% url 'contact' %}" class="text-decoration-none">
                       <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
                           Contact Us
                       </button>
@@ -425,7 +425,7 @@
       <div class="col-lg-7 ps-5 p-5" style="background-color: rgb(245, 243, 243); border-radius:10px">
         <div>
             <h1 style="font-size: 40px;" class="pt-5">Send us a Message</h1><br>
-            <form method="POST" autocomplete="off" id="dataForm" action="/your-submit-url/">
+            <form method="POST" autocomplete="off" id="dataForm">
                 {% csrf_token %}
                 <div id="footerMail">
                     <div>

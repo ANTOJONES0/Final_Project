@@ -155,6 +155,66 @@
           }
 
 
+          .cards {
+            
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 80px; 
+            justify-content: center; 
+            padding: 20px;
+          }
+          
+          .card {
+            flex: 1 1 calc(33.333% - 40px); 
+            max-width: 500px; 
+            text-align: center; 
+            background-color: #f9f9f9; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            overflow: hidden; 
+            transition: transform 0.3s, box-shadow 0.3s; 
+          }
+          
+          .card:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+          }
+          
+          .card img {
+            width: 100%;
+            height: 300px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
+
+          
+          
+          .card h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 15px 10px;
+            line-height: 1.4; 
+          }
+          
+          .card a {
+            text-decoration: none; 
+            color: inherit; 
+            display: block; 
+          }
+          
+          .card a:hover {
+            color: #007BFF; 
+          }
+
+          .custom-button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border-width: 2px;
+            font-weight: bold; 
+        }
+
+
+
 
 
 
@@ -252,7 +312,7 @@
 
 
 
-
+     <!--NAVIGATION-->
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid mb-0">
@@ -276,6 +336,7 @@
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Pages
                       </a>
+                      
                       <ul class="dropdown-menu custom-dropdown">
                           <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
                           <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
@@ -297,17 +358,24 @@
                           <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
                       </ul>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                  </li>
+                  
+                  
               </ul>
-              <form class="d-flex" role="search">
-                <a href="contact" class="text-decoration-none">
-                    <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
+              <div class="d-flex justify-content-center" role="search">
+               
+                  <div class=" d-flex justify-content-center ">
+                    <img src="{% static 'image/phone.png' %}">
+                    <h2 class="d-flex align-items-center text-dark" >+1(212)255-511</h2>
+                  </div>
+                   <div>
+                    <a href="{% url 'contact' %}" class="text-decoration-none">
+                      <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
                         Contact Us
-                    </button>
-                </a>
-              </form>
+                      </button>
+                    </a>
+                   </div>
+                
+              </div>
           </div>
         </div>
       </nav>
@@ -574,7 +642,7 @@
             Hurry
         </h4>
         <h5 style="color: darkgrey; margin: 0;">
-            Let's make something great work together. <a href="contact" style="color: black;">Got a project in mind?</a>
+            Let's make something great work together. <a href="{% url 'contact' %}" style="color: black;">Got a project in mind?</a>
         </h5>
           </div>
 
@@ -625,6 +693,75 @@
       
         
       </div>
+
+
+      <!--CARDS-->
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-6 container-fluid mt-5 d-flex justify-content-start ps-5">
+            <div >
+                <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center " style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
+                LATEST POST
+                </h6>
+                <h1 class="custom-font-size fw-bold">Read our latest news be</h1>
+                <h1 class="custom-font-size fw-bold">always in trend</h1>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-md-flex justify-content-md-end align-items-end  pe-5 mt-5">
+
+            <form role="search">
+                <a href="{% url 'blog1' %}" class="text-decoration-none ">
+                <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
+                    Take a Look
+                </button>
+                </a>
+            </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="cards mt-5">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend1.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2  >Tips for planning a project architecture</h2>
+                    
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend2.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2>Minimalist design of Architect Mark Ruffalo</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend3.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2>Madras Homestay: Uncomplicated yet Effective</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
 
 
 

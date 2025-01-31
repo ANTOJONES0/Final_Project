@@ -284,10 +284,10 @@
                         </ul>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link" href="service">Services</a>
+                        <a class="nav-link" href="{% url 'service' %}">Services</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link" href="project">Projects</a>
+                        <a class="nav-link" href="{% url 'project' %}">Projects</a>
                     </li>
                     <li class="nav-item dropdown me-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -303,7 +303,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <a href="contact" class="text-decoration-none">
+                  <a href="{% url 'contact' %}" class="text-decoration-none">
                       <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
                           Contact Us
                       </button>
@@ -403,7 +403,7 @@
               <li>Project Analysis habits and nature of the person</li><br>
               <li>Smart House System experience of work with different</li><br>
             </ul>
-            <a href="aboutus" class="text-decoration-none">
+            <a href="{% url 'aboutus' %}" class="text-decoration-none">
               <button class=" btn-outline-dark text-dark custom-button rounded-pill" style="margin-left: 12rem;">
                 Read More
               </button>
@@ -670,7 +670,7 @@
                     <div class="d-flex justify-content-end ">
                       <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
                         <div>
-                          <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                          <a href="{% url 'pricingplan' %}" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
                         </div>
                       </button>
                     </div>
@@ -718,7 +718,7 @@
                     <div class="d-flex justify-content-end ">
                       <button class="bg-white p-3 " style="width: fit-content; border-radius: 15px;">
                         <div>
-                          <a href="pricingplan" class="text-dark" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                          <a href="{% url 'pricingplan' %}" class="text-dark" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
                         </div>
                       </button>
                     </div>
@@ -766,7 +766,7 @@
                     <div class="d-flex justify-content-end ">
                       <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
                         <div>
-                          <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                          <a href="{% url 'pricingplan' %}" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
                         </div>
                       </button>
                     </div>
@@ -811,7 +811,7 @@
               <p>2010</p>
               <p>The Design Awards</p>
               <p >INTERIOR </p>
-              <a href="aboutus"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
+              <a href="{% url 'aboutus' %}"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
             </div>
             <div class="pt-2 text-white" >
               <hr>
@@ -821,7 +821,7 @@
               <p>2015</p>
               <p>Star Winner Award</p>
               <p >INTERIOR </p>
-              <a href="aboutus"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
+              <a href="{% url 'aboutus' %}"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
             </div>
             <div class="pt-2 text-white">
               <hr>
@@ -831,7 +831,7 @@
               <p>2019</p>
               <p>Best Design of Year</p>
               <p >INTERIOR </p>
-              <a href="aboutus"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
+              <a href="{% url 'aboutus' %}"><img src="{% static 'image/arrow.png' %}" alt="Image" class="img-fluid"></a>
             </div>
             <div class="pt-2 text-white">
               <hr>
@@ -847,28 +847,27 @@
 
       <!--LATEST NEWS-->
 
-      <div class="container-fluid" data-aos="fade-up">
-        <div class="mt-5">
-          <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 80px;  letter-spacing: 1px;">
-            LATEST POST
-          </h6>
-          <h1 class="custom-font-size fw-bold">Read our latest news</h1>
-          <h1 class="custom-font-size fw-bold">be always in trend</h1>
-          <form role="search">
-            <a href="project" class="text-decoration-none ">
-              <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
-                Take a Look
-              </button>
-            </a>
-          </form>
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-6 container-fluid mt-5 d-flex justify-content-start ps-5">
+            <div >
+                <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center " style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
+                LATEST POST
+                </h6>
+                <h1 class="custom-font-size fw-bold">Read our latest news be</h1>
+                <h1 class="custom-font-size fw-bold">always in trend</h1>
+            </div>
         </div>
-        
 
-        
+        <div class="col-md-6 d-md-flex justify-content-md-end align-items-end  pe-5 mt-5">
 
-
-
-
+            <form role="search">
+                <a href="{% url 'project' %}" class="text-decoration-none ">
+                <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
+                    Take a Look
+                </button>
+                </a>
+            </form>
+        </div>
       </div>
 
       
