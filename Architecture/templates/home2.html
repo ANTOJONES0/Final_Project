@@ -12,6 +12,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">                    <!--AOS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">  <!--ICONS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
 
     <style>
 
@@ -184,6 +186,25 @@
             
           }
 
+
+          .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90%;
+            border: 0;
+        }
+
+        /*TEAM*/
+
           .teams {
             margin: 20px;
           }
@@ -216,24 +237,71 @@
                 margin-bottom: 20px; 
             }
 
-
-
-
-            .video-container {
+            .share {
               position: relative;
-              width: 100%;
-              padding-bottom: 56.25%; 
-              height: 0;
-              overflow: hidden;
-          }
-          .video-container iframe {
+            }
+            
+            .share .social-icons {
+              display: flex;
+              flex-direction: column;
               position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 80%;
-              border: 0;
-          }
+              bottom: 50px;
+              opacity: 0;
+              transform: translateY(20px);
+              transition: all 0.3s ease-in-out;
+            }
+            
+            .share:hover .social-icons {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            
+            .social-icons a {
+              text-decoration: none;
+              margin: 5px 0;
+              padding: 10px;
+              color: white;
+              border-radius: 5px;
+              text-align: center;
+              background-color: #060606;
+              transition: background-color 0.3s;
+            }
+            
+            .share-btn {
+              background: black;
+              color: white;
+              padding: 10px 15px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+            
+            .youtube {
+              background-color: red;
+            }
+            
+            .twitter {
+              background-color: #1DA1F2;
+            }
+            
+            .facebook {
+              background-color: #3b5998;
+            }
+
+
+            .bg-dark:hover {
+              background-color: #050505; /* Slightly lighter dark gray */
+              transition: background-color 0.3s ease;
+            }
+            
+
+
+
+
+          
+
+
+
       
         
 
@@ -305,6 +373,10 @@
                 font-size: 20px;
               }
             }
+
+
+
+           
         
             
         
@@ -368,7 +440,7 @@
                 </li>
             </ul>
             <form class="d-flex" role="search">
-              <a href="contact" class="text-decoration-none">
+              <a href="{% url 'contact' %}" class="text-decoration-none">
                   <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
                       Contact Us
                   </button>
@@ -387,21 +459,23 @@
 
     <div class="mask text-light d-flex flex-column justify-content-start align-items-center  p-4 mt-5">
       <div class="container">
-          <h3 style="font-size: 20px;">Modern Architecture Studio</h3>
-          <h1 class=" fw-lighter" style="font-size: 90px;">CREATING SPACES</h1>
-          <h1 class="display-1 fw-bold" style="font-size: 100px;">THAT ASPIRE</h1>
+          <h3 style="font-size: 20px;">Constructing an Improved Future</h3>
+          <h1 class=" fw-bolder" style="font-size: 70px;">Architecture that<br> recognizes all<br> your sensibilities.</h1>
+          
           <a href="contact"><button class="btn btn-outline-light custom-button mt-5 rounded-pill" type="button">Take a Look</button></a>
       </div>
     </div>
   
   </div> 
 
+  <div style="margin-top: 100px;"></div>
 
-    <div class="container-fluid">
+
+    
 
         <!--MANS-->
 
-        <div class="container-fluid d-flex align-items-center" >
+        <div class="container-fluid d-flex align-items-center" data-aos="fade-up">
             <div class="row">
 
                 <!--COLUMN 1-->
@@ -484,28 +558,15 @@
         <!--MARQUEE-->
 
         <div class="mt-5" >
-            <marquee behavior="scroll" direction="left" scrollamount="10" data-aos="fade-up">
+            <marquee behavior="scroll" direction="left" scrollamount="10">
               <div>
                 <h1 class="marquee-text"> <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE</h1>
               </div>
             </marquee>
           </div>
 
-          <div style="margin-top: 100px;"></div>
+        <div style="margin-top: 100px;"></div>
 
-
-        <!--SLIDE 2-->
-
-        <div class="text-center mt-5" data-aos="fade-up">
-            <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 150px; margin: 0 auto; letter-spacing: 1px;">
-              OUR PROJECT
-            </h6>
-            <h1 class="custom-font-size fw-bold">Through a unique combination of</h1>
-            <h1 class="custom-font-size fw-bold">engineering and design.</h1>
-          </div>
-
-
-          <div style="margin-top: 100px;"></div>
 
 
           <!--YEARS-->
@@ -520,7 +581,7 @@
 
           
 
-          <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+          <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel" data-aos="fade-up">
             <div class="carousel-inner py-5"> 
               <div class="carousel-item active" data-bs-interval="5000">
                 <div class="row m-5 year">
@@ -678,7 +739,7 @@
                 Hurry
             </h4>
             <h5 style="color: darkgrey; margin: 0;">
-                Let's make something great work together. <a href="contact" style="color: black;">Got a project in mind?</a>
+                Let's make something great work together. <a href="{% url 'contact' %}" style="color: black;">Got a project in mind?</a>
             </h5>
           </div>
 
@@ -717,7 +778,7 @@
 
             <!--VIDEO-->
 
-            <div class="video-container">
+            <div class="video-container" data-aos="fade-up">
               <iframe 
                   src="https://www.youtube.com/embed/d4DP8cSXUIQ?si=ZQgYz48g_o4TOORa" 
                   title="YouTube video player" 
@@ -744,9 +805,9 @@
                 <div class="col-md-6 d-md-flex justify-content-md-end align-items-end  pe-5">
 
                     <form role="search">
-                        <a href="project" class="text-decoration-none ">
+                        <a href="{% url 'ourteam' %}" class="text-decoration-none ">
                         <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
-                            Take a Look
+                            View All
                         </button>
                         </a>
                     </form>
@@ -761,28 +822,106 @@
                 <img src="{% static 'image/team1.png' %}" alt="sticker">
               </div>
               <h1>Robert Johnson</h1>
-              <h6>Construction Manager</h6>
+              <div class="d-flex align-items-center">
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Construction Manager</h6>
+                <div class="share ms-auto">
+                  <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
+                    <i class="fas fa-share-alt fa-2x"></i>
+                  </div>
+                  <div class="social-icons">
+                    
+                    <a href="https://www.twitter.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              
             </div>
             <div class="col-sm-6 col-xl-3 team">
               <div class="d-flex justify-content-center">
                 <img src="{% static 'image/team2.png' %}" alt="sticker">
               </div>
               <h1>Marko Daniel</h1>
-              <h6>Architect</h6>
+              <div class="d-flex align-items-center">
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Architect</h6>
+                <div class="share ms-auto">
+                  <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
+                    <i class="fas fa-share-alt fa-2x"></i>
+                  </div>
+                  <div class="social-icons">
+                    
+                    <a href="https://www.twitter.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-sm-6 col-xl-3 team">
               <div class="d-flex justify-content-center">
                 <img src="{% static 'image/team3.png' %}" alt="sticker">
               </div>
               <h1>Jake Nicholson</h1>
-              <h6>Site Supervisor</h6>
+              <div class="d-flex align-items-center">
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Site Supervisor</h6>
+                <div class="share ms-auto">
+                  <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
+                    <i class="fas fa-share-alt fa-2x"></i>
+                  </div>
+                  <div class="social-icons">
+                    
+                    <a href="https://www.twitter.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-sm-6 col-xl-3 team">
               <div class="d-flex justify-content-center">
                 <img src="{% static 'image/team4.png' %}" alt="sticker">
               </div>
               <h1>Sony Miltor</h1>
-              <h6>Estimator</h6>
+              <div class="d-flex align-items-center">
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Estimator</h6>
+                <div class="share ms-auto">
+                  <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
+                    <i class="fas fa-share-alt fa-2x"></i>
+                  </div>
+                  <div class="social-icons">
+                    
+                    <a href="https://www.twitter.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white me-3 rounded-pill">
+                      <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -794,6 +933,11 @@
     
     
               <div style="margin-top: 100px;"></div>
+
+
+
+
+              
 
 
 

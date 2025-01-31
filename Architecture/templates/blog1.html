@@ -132,6 +132,7 @@
           .con img{
             width: 20px;
             height: 20px;
+            
           }
 
           
@@ -291,7 +292,7 @@
                   </li>
               </ul>
               <form class="d-flex" role="search">
-                <a href="contact" class="text-decoration-none">
+                <a href="{% url 'contact' %}" class="text-decoration-none">
                     <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
                         Contact Us
                     </button>
@@ -306,168 +307,102 @@
       <div class="position-relative resize-img">
         <img src="{% static 'image/blog11.jpg' %}" alt="Home Image" style="border-radius: 15px;">
 
-        <<div class="mask text-light d-flex flex-column justify-content-start align-items-center  p-4 mt-5 text-dark">
+        <div class="mask text-light d-flex flex-column justify-content-start align-items-center  p-4 mt-5 text-dark">
           <div class="container">
               <h1 class="display-1 fw-bold">BLOG</h1>
           </div>
       </div>
 
 
-      <!-- CARDS -->
+      <!--CARDS-->
 
-      <!-- <div class="cards mt-5">
-        <div class="row">
-          <div class="col-12 col-sm-4 col-lg-4">
-            <div class="card">
-              <a href="">
-                <img src="{% static 'image/blog12.png' %}" alt="Home Image">
-                <h2>Tips for planning a project architecture</h2>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-lg-4">
-            <div class="card">
-              <a href="">
-                <img src="{% static 'image/blog13.png' %}" alt="Home Image">
-                <h2>Minimalist design of Architect Mark Ruffalo</h2>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-lg-4">
-            <div class="card">
-              <a href="">
-                <img src="{% static 'image/blog14.png' %}" alt="Home Image">
-                <h2>Madras Homestay: Uncomplicated yet Effective</h2>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="row d-flex justify-content-center">
-          <div class="col-12  col-sm-4 col-lg-4">
-            <div class="card">
-              <a href="">
-                <img src="{% static 'image/blog15.png' %}" alt="Home Image">
-                <h2>New UK Government rules about living in Forest</h2>
-              </a>
-            </div>
-          </div>
-          <div class="col-12  col-sm-4 col-lg-4">
-            <div class="card">
-              <a href="">
-                <img src="{% static 'image/blog16.png' %}" alt="Home Image">
-                <h2>Constructing the city Architectural Future</h2>
-              </a>
-            </div>
-          </div>
-          <div class="col-12  col-sm-4 col-lg-4">
-            <div class="card">
-              <a href="">
-                <img src="{% static 'image/blog17.png' %}" alt="Home Image">
-                <h2>Challenges of collective living in Modern Design</h2>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <div class="cards mt-5">
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100">
-              <a href="#" class="text-decoration-none text-dark">
-                <div>
-                  <img src="{% static 'image/blogs1.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-start con">
-                    <div class="d-flex align-items-end">
-                      <img src="{% static 'image/cal.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                    </div>
-                    <div class="d-flex align-items-start ps-3" style="padding-bottom: 10px;">
-                      <p>DECEMBER 28,2024</p>
-                    </div>
-                    <div class="ps-5"></div>
-                    <div class="d-flex align-items-end">
-                      <img src="{% static 'image/con.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                    </div>
-                    <div class="d-flex align-items-start ps-3" style="padding-bottom: 10px;">
-                      <p>BY ADMIN</p>
-                    </div>
-                  </div >
-                  <div style="font-size: 50px;">
-                    <h2>Tips for planning a project architecture</h2>
+      <div class="container">
+        <div class="cards mt-5">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend1.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2  >Tips for planning a project architecture</h2>
+                    
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend2.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2>Minimalist design of Architect Mark Ruffalo</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend3.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2>Madras Homestay: Uncomplicated yet Effective</h2>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-          <!-- Card 2 -->
+        </div>
+      </div>
 
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100">
-              <a href="#" class="text-decoration-none text-dark">
-                <img src="{% static 'image/blog2.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h2>Minimalist design of Architect Mark Ruffalo</h2>
-                </div>
-              </a>
+      <div class="container">
+        <div class="cards mt-5">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend1.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2  >Tips for planning a project architecture</h2>
+                    
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100">
-              <a href="#" class="text-decoration-none text-dark">
-                <img src="{% static 'image/blogs3.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h2>Madras Homestay: Uncomplicated yet Effective</h2>
-                </div>
-              </a>
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend2.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2>Minimalist design of Architect Mark Ruffalo</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <a href="#" class="text-decoration-none text-dark">
+                  <img src="{% static 'image/home3trend3.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <div class="card-body">
+                    <h2>Madras Homestay: Uncomplicated yet Effective</h2>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="cards mt-5">
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100">
-              <a href="#" class="text-decoration-none text-dark">
-                <img src="{% static 'image/blogs4.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h2  >Tips for planning a project architecture</h2>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100">
-              <a href="#" class="text-decoration-none text-dark">
-                <img src="{% static 'image/blogs5.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h2>Minimalist design of Architect Mark Ruffalo</h2>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100">
-              <a href="#" class="text-decoration-none text-dark">
-                <img src="{% static 'image/blogs6.png' %}" alt="Home Image" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h2>Madras Homestay: Uncomplicated yet Effective</h2>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div style="margin-top: 60px;"></div>
+
+    
+    
+
+     
        
       <!--Footer-->
 
