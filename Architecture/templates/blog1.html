@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
     <style>
         body {
             margin-left: 25px;
@@ -304,14 +305,15 @@
 
       <!-- IMAGE -->
 
-      <div class="position-relative resize-img">
+    <div class="position-relative resize-img">
         <img src="{% static 'image/blog11.jpg' %}" alt="Home Image" style="border-radius: 15px;">
 
         <div class="mask text-light d-flex flex-column justify-content-start align-items-center  p-4 mt-5 text-dark">
           <div class="container">
               <h1 class="display-1 fw-bold">BLOG</h1>
           </div>
-      </div>
+        </div>
+    </div>
 
 
       <!--CARDS-->
@@ -323,7 +325,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/home3trend1.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/demo7.jpeg' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
                     <h2  >Tips for planning a project architecture</h2>
                     
@@ -335,7 +337,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/home3trend2.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/demo8.jpeg' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
                     <h2>Minimalist design of Architect Mark Ruffalo</h2>
                   </div>
@@ -346,7 +348,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/home3trend3.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/demo9.jpeg' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
                     <h2>Madras Homestay: Uncomplicated yet Effective</h2>
                   </div>
@@ -357,14 +359,14 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container"  data-aos="fade-up">
         <div class="cards mt-5">
           <div class="row">
             <!-- Card 1 -->
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/home3trend1.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/demo1.jpg' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
                     <h2  >Tips for planning a project architecture</h2>
                     
@@ -376,7 +378,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/home3trend2.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/demo3.jpeg' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
                     <h2>Minimalist design of Architect Mark Ruffalo</h2>
                   </div>
@@ -387,7 +389,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card h-100">
                 <a href="#" class="text-decoration-none text-dark">
-                  <img src="{% static 'image/home3trend3.png' %}" alt="Home Image" class="card-img-top img-fluid">
+                  <img src="{% static 'image/demo4.jpeg' %}" alt="Home Image" class="card-img-top img-fluid">
                   <div class="card-body">
                     <h2>Madras Homestay: Uncomplicated yet Effective</h2>
                   </div>
@@ -464,10 +466,10 @@
                 <div class="col-12 col-md-4 mb-4">
                   <h3 class="text-white mb-3">Useful Links</h3>
                   <div class="d-flex flex-column align-items-center align-items-md-start gap-2">
-                    <a href="home" class="text-white text-decoration-none h4 pt-3">Home</a>
-                    <a href="about" class="text-white text-decoration-none h4">About</a>
-                    <a href="service" class="text-white text-decoration-none h4">Services</a>
-                    <a href="contact" class="text-white text-decoration-none h4">Contact</a>
+                    <a href="{% url 'home1' %}" class="text-white text-decoration-none h4 pt-3">Home</a>
+                    <a href="{% url 'aboutus' %}" class="text-white text-decoration-none h4">About</a>
+                    <a href="{% url 'service' %}" class="text-white text-decoration-none h4">Services</a>
+                    <a href="{% url 'contact' %}" class="text-white text-decoration-none h4">Contact</a>
                   </div>
                 </div>
       
@@ -504,6 +506,14 @@
 
 
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+       <script>
+    
+        AOS.init({
+            duration: 1000, 
+            easing: 'ease-in-out', 
+            once: true
+        });
+    </script>
 
 </body>
 </html>
