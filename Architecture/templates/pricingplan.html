@@ -275,7 +275,7 @@
   <div style="margin-top: 50px;"></div>
 
   <!--PRICES-->
-  <div class="container-fluid">
+  <div class="container-fluid"  data-aos="fade-up">
     <div class="container-fluid">
       <div class="row d-flex justify-content-center">
         <div class="col-md-12 col-xl-4">
@@ -296,7 +296,7 @@
             <!--CARD 1-->
 
 
-            <div class="card p-5" style="border-radius: 20px;">
+            <div class="card p-5" style="border-radius: 20px;"  data-aos="fade-right">
               <h2 style="font-size: 20px;">Small Business</h2>
               <div class="d-flex justify-content-start"  style="size: 50px;"></div>
               <div class="row">
@@ -329,7 +329,7 @@
                   <div class="d-flex justify-content-end ">
                     <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
                       <div>
-                        <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        <a href="{% url 'pricingplan' %}" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
                       </div>
                     </button>
                   </div>
@@ -344,7 +344,7 @@
             <!--CARD 2-->
 
             
-            <div class="card p-5 bg-dark" style="border-radius: 20px; ">
+            <div class="card p-5 bg-dark" style="border-radius: 20px; "  data-aos="fade-right">
               <h2 style="font-size: 20px; color:white">Small Business</h2>
               <div class="d-flex justify-content-start"  style="size: 50px;"></div>
               <div class="row">
@@ -377,7 +377,7 @@
                   <div class="d-flex justify-content-end ">
                     <button class="bg-white p-3 " style="width: fit-content; border-radius: 15px;">
                       <div>
-                        <a href="pricingplan" class="text-dark" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        <a href="{% url 'pricingplan' %}" class="text-dark" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
                       </div>
                     </button>
                   </div>
@@ -392,7 +392,7 @@
             <!--CARD 3-->
 
 
-            <div class="card p-5" style="border-radius: 20px;">
+            <div class="card p-5" style="border-radius: 20px;"  data-aos="fade-right">
               <h2 style="font-size: 20px;">Small Business</h2>
               <div class="d-flex justify-content-start"  style="size: 50px;"></div>
               <div class="row">
@@ -425,7 +425,7 @@
                   <div class="d-flex justify-content-end ">
                     <button class="bg-dark p-3 " style="width: fit-content; border-radius: 15px;">
                       <div>
-                        <a href="pricingplan" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
+                        <a href="{% url 'pricingplan' %}" class="text-white" style="text-decoration: none; font-size: 20px;">Purchase Now</a>
                       </div>
                     </button>
                   </div>
@@ -442,6 +442,8 @@
         </div>
     </div>
   </div>
+
+  <div style="margin-top: 100px;"></div>
 
 
 
@@ -508,10 +510,10 @@
             <div class="col-12 col-md-4 mb-4">
               <h3 class="text-white mb-3">Useful Links</h3>
               <div class="d-flex flex-column align-items-center align-items-md-start gap-2">
-                <a href="home" class="text-white text-decoration-none h4 pt-3">Home</a>
-                <a href="about" class="text-white text-decoration-none h4">About</a>
-                <a href="service" class="text-white text-decoration-none h4">Services</a>
-                <a href="contact" class="text-white text-decoration-none h4">Contact</a>
+                <a href="{% url 'home1' %}" class="text-white text-decoration-none h4 pt-3">Home</a>
+                <a href="{% url 'aboutus' %}" class="text-white text-decoration-none h4">About</a>
+                <a href="{% url 'service' %}" class="text-white text-decoration-none h4">Services</a>
+                <a href="{% url 'contact' %}" class="text-white text-decoration-none h4">Contact</a>
               </div>
             </div>
   
