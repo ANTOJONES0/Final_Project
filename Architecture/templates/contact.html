@@ -14,6 +14,11 @@
     
     
     <style>
+
+      *{
+        font-family: "Moderustic, sans-serif";
+      }
+
         body {
             margin-left: 25px;
             margin-right: 25px;
@@ -25,7 +30,7 @@
           }
     
           .nav-link {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-decoration: none;
           }
     
@@ -225,6 +230,7 @@
             width: 100%;
             max-width: 350px;
             padding: 10px;
+            font-size: 15px;
           }
       
          
@@ -271,63 +277,63 @@
 
   <!-- Navigation -->
   
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid mb-0">
-              <img src="{% static 'image/logo.png' %}" alt="">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Home
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
-                            <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
-                            <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Pages
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
-                            <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
-                            <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'service' %}">Services</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'project' %}">Projects</a>
-                    </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Blog
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
-                            <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <a href="{% url 'contact' %}" class="text-decoration-none">
-                      <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
-                          Contact Us
-                      </button>
-                  </a>
-                </form>
-            </div>
-          </div>
-        </nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid mb-0">
+        <img src="{% static 'image/logo.png' %}" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        Home
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
+                        <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
+                        <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
+                        <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
+                        <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="{% url 'service' %}">Services</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="{% url 'project' %}">Projects</a>
+                </li>
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        Blog
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
+                        <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <a href="{% url 'contact' %}" class="text-decoration-none">
+                  <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button" style="font-size: 19px;">
+                      Contact Us
+                  </button>
+              </a>
+            </form>
+        </div>
+    </div>
+   </nav>
 
 
   <!-- IMAGE -->
@@ -358,7 +364,7 @@
           </div>
           <div class="card-body">
             <hr><br>
-            <p class="card-text" style="font-size: 20px;">pbminfotech@gmail.com & support@pbminfotech.com</p>
+            <p class="card-text" style="font-size: 20px;font-family: Roboto;">pbminfotech@gmail.com & support@pbminfotech.com</p>
           </div>
         </div>
       </div>
@@ -370,7 +376,7 @@
           </div>
           <div class="card-body">
             <hr><br>
-            <p class="card-text" style="font-size: 20px;">85 Preston, Inglewood, Maine 98380, Hoofddorp Noord- 2132</p>
+            <p class="card-text" style="font-size: 20px; font-family: Roboto;">85 Preston, Inglewood, Maine 98380, Hoofddorp Noord- 2132</p>
           </div>
         </div>
       </div>
@@ -382,7 +388,7 @@
           </div>
           <div class="card-body">
             <hr><br>
-            <p class="card-text" style="font-size: 20px;">Phone: +001 236-895-4732
+            <p class="card-text" style="font-size: 20px;font-family: Roboto;">Phone: +001 236-895-4732
               ‍Mobile: +9123 895-4732-236</p>
           </div>
         </div>
@@ -395,7 +401,7 @@
           </div>
           <div class="card-body">
             <hr><br>
-            <p class="card-text" style="font-size: 20px;">Mon to Fri - 09:00am To 06:00pm
+            <p class="card-text" style="font-size: 20px; font-family: Roboto;" >Mon to Fri - 09:00am To 06:00pm
               ‍Saturday to Sunday - Closed</p>
           </div>
         </div>
@@ -413,8 +419,8 @@
       <!-- Left Column (Text) -->
       <div class="col-lg-5 pe-5">
         <div class="mt-5" data-aos="fade-up">
-          <h5 class="rounded-pill p-1 mt-5 ps-3" style="background-color: rgb(211, 203, 203); width: 100px; letter-spacing: 1px;">
-            CONTACT US
+          <h5 class="rounded-pill p-1 mt-5 ps-3 fw-bold" style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
+            CONTACT 
           </h5>
           <h1 class="custom-font-size fw-bold">Write us what you </h1>
           <h1 class="custom-font-size fw-bold">want to know.</h1><br>
@@ -476,12 +482,9 @@
 
   <!-- MAP -->
 
-  <div onload="initMap()"  data-aos="fade-up">
-    <h1>My Map</h1>
-    <div id="map" style="width: 100%; height: 500px;"></div>
-  </div>
+  
 
-  <div style="margin-top: 100px;"></div>
+  
 
 
 
@@ -591,26 +594,7 @@
 
 
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-
-      <script>
-        function initMap() {
-         
-          const location = { lat: 37.7749, lng: -122.4194 }; 
-    
-          
-          const map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12, 
-            center: location 
-          });
-    
-          
-          const marker = new google.maps.Marker({
-            position: location,
-            map: map
-          });
-        }
-      </script>
+  
     
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>

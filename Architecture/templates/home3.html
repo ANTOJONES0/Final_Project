@@ -15,6 +15,12 @@
 
     <style>
 
+      *{
+        font-family: "Moderustic, sans-serif";
+      }
+
+      
+
         body {
             margin-left: 25px;
             margin-right: 25px;
@@ -28,12 +34,14 @@
           }
     
           .nav-link {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-decoration: none;
+           
           }
     
           .btn-contact {
             font-size: 1rem;
+            
           }
     
           .nav-item.dropdown:hover .dropdown-menu {
@@ -51,17 +59,20 @@
             padding: 10px 20px; 
             border-width: 2px; 
             
+            
           }
     
           .custom-dropdown {
             min-width: 100px; 
             font-size: 1.25rem;
             border-radius: 10px; 
+            
           }
             
           .custom-dropdown .dropdown-item {
             padding: 10px 15px; 
             font-size: 1.8rem; 
+            
           }
     
           
@@ -75,10 +86,11 @@
     
           .mask {
             position: absolute;
-            top: 20px;
+            top: 0px;
             left: 0;
             width: 100%;
             height: 100%;
+           
           }
     
           .nav-link:hover {
@@ -204,6 +216,7 @@
           width: 100%;
           max-width: 350px;
           padding: 10px;
+          font-size: 15px;
         }
     
        
@@ -253,65 +266,66 @@
 <body>
 
     <div class="container-fluid">
+
         <!-- NAVIGATION -->
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid mb-0">
-            <img src="{% static 'image/logo.png' %}" alt="">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Home
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
-                            <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
-                            <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Pages
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
-                            <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
-                            <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'service' %}">Services</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'project' %}">Projects</a>
-                    </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Blog
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
-                            <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <a href="{% url 'contact' %}" class="text-decoration-none">
-                      <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
-                          Contact Us
-                      </button>
-                  </a>
-                </form>
-            </div>
+        <img src="{% static 'image/logo.png' %}" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        Home
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="{% url 'home1' %}">Home Page 1</a></li>
+                        <li><a class="dropdown-item" href="{% url 'home2' %}">Home Page 2</a></li>
+                        <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="{% url 'aboutus' %}">About Us</a></li>
+                        <li><a class="dropdown-item" href="{% url 'ourteam' %}">Our Team</a></li>
+                        <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="{% url 'service' %}" style="font-size: 25px;">Services</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="{% url 'project' %}" style="font-size: 25px;">Projects</a>
+                </li>
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        Blog
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="{% url 'blog1' %}">Blog 1</a></li>
+                        <li><a class="dropdown-item" href="{% url 'blog2' %}">Blog 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}" style="font-size: 25px;">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <a href="{% url 'contact' %}" class="text-decoration-none">
+                  <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button" style="font-size: 19px;">
+                      Contact Us
+                  </button>
+              </a>
+            </form>
         </div>
-      </nav>
+    </div>
+        </nav>
       
       <!-- HOME IMAGE -->
        
@@ -321,11 +335,11 @@
 
         <div class="mask text-light d-flex flex-column lign-items-center justify-content-center align-items-center  p-4 mt-5">
           <div class="container">
-              <h3 style="font-size: 20px;">We Draft to Perfection</h3>
+              <h3 style="font-size: 28px;">We Draft to Perfection</h3>
               <h1 class=" fw-lighter" style="font-size: 90px;">EVERY PLANS</h1>
-              <h1 class="display-1 fw-bold" style="font-size: 100px;">IS SPECIAL</h1>
-              <a href="{% url 'contact' %}"><button class="btn btn-outline-light custom-button mt-5 rounded-pill" type="button">Take a Look</button></a>
-          </div>
+              <h1 class="display-1 fw-bold" style="font-size: 90px;">IS SPECIAL</h1>
+              <a href="{% url 'contact' %}" style="text-decoration: none;"><button class="btn btn-outline-light custom-button mt-5 rounded-pill d-none d-md-block" type="button">Take a Look</button></a>
+            </div>
         </div>
       
       </div> 
@@ -388,7 +402,9 @@
             <img src="{% static 'image/guar.png' %}" alt="" class="img-fluid">
           </div>
           <div class="col-12 col-xl-6" data-aos="fade-right">
-            <h6 class="rounded-pill p-1" style="background-color: rgb(212, 209, 209); width: 60px;">Since 1986</h6>
+            <h5 class="rounded-pill p-2 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 90px;letter-spacing: 1px;">
+              SINCE 1986
+            </h5>
             <h1 class="display-5 fw-bold" style="font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
               We reach beyond established
             </h1>
@@ -419,7 +435,7 @@
 
       <div class="mt-5" >
         <marquee behavior="scroll" direction="left" scrollamount="10" data-aos="fade-up">
-          <div>
+          <div style="font-family: Roboto;">
             <h1 class="marquee-text"> <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE</h1>
           </div>
         </marquee>
@@ -444,7 +460,7 @@
       <!-- DESIGN -->
        
       <div class="text-center mt-5" data-aos="fade-up">
-        <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 130px; margin: 0 auto; letter-spacing: 1px;">
+        <h6 class="rounded-pill p-1 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 130px; margin: 0 auto; letter-spacing: 1px;">
           OUR SERVICES
         </h6>
         <h1 class="custom-font-size fw-bold">Architects excited about beauty</h1>
@@ -464,8 +480,8 @@
               <img src="{% static 'image/serve1.png' %}" alt="Image" class="img-fluid">
               <div class="ps-3">
                 <h1>Sustainable Building</h1>
-                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
-                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;font-family:Roboto">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="{% url 'project' %}" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
               </div>
             </div>
           </div>
@@ -475,8 +491,8 @@
               <img src="{% static 'image/serve22.png' %}" alt="Image" class="img-fluid">
               <div class="ps-3">
                 <h1>Innovation & Remodeling</h1>
-                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
-                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;font-family:Roboto">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="{% url 'project' %}" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
               </div>
             </div>
           </div>
@@ -486,8 +502,8 @@
               <img src="{% static 'image/serve3.png' %}" alt="Image" class="img-fluid">
               <div class="ps-3">
                 <h1>Custom Construction</h1>
-                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
-                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;font-family:Roboto">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="{% url 'project' %}" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
               </div>
             </div>
           </div>
@@ -499,8 +515,8 @@
               <img src="{% static 'image/serve4.png' %}" alt="Image" class="img-fluid">
               <div class="ps-3">
                 <h1>Project Management</h1>
-                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
-                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;font-family:Roboto">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="{% url 'project' %}" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
               </div>
             </div>
           </div>
@@ -510,8 +526,8 @@
               <img src="{% static 'image/serve5.png' %}" alt="Image" class="img-fluid">
               <div class="ps-3">
                 <h1>Design and Planning</h1>
-                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
-                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;font-family:Roboto">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="{% url 'project' %}" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
               </div>
             </div>
           </div>
@@ -521,8 +537,8 @@
               <img src="{% static 'image/serve6.png' %}" alt="Image" class="img-fluid">
               <div class="ps-3">
                 <h1>Furniture & Decor</h1>
-                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
-                <a href="#" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
+                <p class="pt-3 text-muted text-gray-600" style="font-size: 15px; line-height:25px;font-family:Roboto">Our Culture nurtures and strives to achieve innovation and creativity legal expertise.</p>
+                <a href="{% url 'project' %}" class="text-dark fw-bold" style="font-size: 15px;">Read More</a>
               </div>
             </div>
           </div>
@@ -572,7 +588,7 @@
 
       <div class="container-fluid" style="background-color: rgb(252, 248, 248); border-radius:15px; padding:10px;">
         <div class="text-center mt-5" data-aos="fade-up">
-          <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 150px; margin: 0 auto; letter-spacing: 1px;">
+          <h6 class="rounded-pill p-1 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 150px; margin: 0 auto; letter-spacing: 1px;">
             TRUSTED EXPERIENCE
           </h6>
           <h1 class="custom-font-size fw-bold">Wants our client's</h1>
@@ -621,8 +637,8 @@
         <div class="row d-flex justify-content-center">
           <div class="col-md-12 col-xl-4">
             <div class=" mt-5" data-aos="fade-up">
-              <h6 class="rounded-pill p-2 mt-5" style="background-color: rgb(211, 203, 203); width: 95px;  letter-spacing: 1px;">
-                PRICING TABLE
+              <h6 class="rounded-pill p-1 mt-5 fw-bold text-center" style="background-color: rgb(211, 203, 203); width: 95px;  letter-spacing: 1px;">
+                PRICING 
               </h6>
               <h1 class="custom-font-size fw-bold">The best pricing to</h1>
               <h1 class="custom-font-size fw-bold">help you!</h1><br>
@@ -793,7 +809,7 @@
         <div class="col-xl-6 bg-dark container p-5 award">
           <div style="margin-top: 10px;"></div>
           <div class="ps-5 mt-5" style="margin-left: 30px;">
-            <h5 class="rounded-pill p-2 mt-5" style="background-color: rgb(211, 203, 203); width: 90px;  letter-spacing: 1px;">
+            <h5 class="rounded-pill p-2 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 90px;  letter-spacing: 1px;">
               SINCE 1986
             </h5>
             <div class="awardp ">
@@ -850,7 +866,7 @@
       <div class="row" data-aos="fade-up">
         <div class="col-md-6 container-fluid mt-5 d-flex justify-content-start ps-5">
             <div >
-                <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center " style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
+                <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center fw-bold" style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
                 LATEST POST
                 </h6>
                 <h1 class="custom-font-size fw-bold">Read our latest news be</h1>
@@ -861,8 +877,8 @@
         <div class="col-md-6 d-md-flex justify-content-md-end align-items-end  pe-5 mt-5">
 
             <form role="search">
-                <a href="{% url 'project' %}" class="text-decoration-none ">
-                <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
+                <a href="{% url 'project' %}" class="text-decoration-none " >
+                <button class="btn btn-outline-dark custom-button rounded-pill " style="font-size: 20px;" type="button">
                     Take a Look
                 </button>
                 </a>
