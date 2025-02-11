@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     
     <!-- ICONS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -20,6 +22,10 @@
 
     <style>
 
+      *{
+        font-family: "Moderustic, sans-serif";
+      }
+
       body {
         margin-left: 25px;
         margin-right: 25px;
@@ -31,7 +37,7 @@
       }
 
       .nav-link {
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-decoration: none;
       }
 
@@ -298,6 +304,7 @@
       width: 100%;
       max-width: 350px;
       padding: 10px;
+      font-size: 15px;
     }
 
    
@@ -333,6 +340,12 @@
       }
     }
 
+
+    .stars {
+      font-size: 20px;
+      color: #FF9800; /* Star color */
+  }
+
     
 
    
@@ -363,8 +376,8 @@
             </button>
             <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                             Home
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
@@ -373,8 +386,8 @@
                             <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                             Pages
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
@@ -383,14 +396,14 @@
                             <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'service' %}">Services</a>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="{% url 'service' %}" style="font-size: 25px;">Services</a>
                     </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'project' %}">Projects</a>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="{% url 'project' %}" style="font-size: 25px;">Projects</a>
                     </li>
-                    <li class="nav-item dropdown me-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                             Blog
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
@@ -399,12 +412,12 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link" href="{% url 'contact' %}" style="font-size: 25px;">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
                   <a href="{% url 'contact' %}" class="text-decoration-none">
-                      <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
+                      <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button" style="font-size: 19px;">
                           Contact Us
                       </button>
                   </a>
@@ -421,10 +434,11 @@
 
         <div class="mask text-light d-flex flex-column justify-content-start align-items-center  p-4 mt-5">
           <div class="container">
-              <h3 style="font-size: 20px;">Modern Architecture Studio</h3>
-              <h1 class=" fw-lighter" style="font-size: 90px;">CREATING SPACES</h1>
+              <h3 style="font-size: 28px;">Modern Architecture Studio</h3>
+              <h1 class=" fw-lighter" style="font-size: 80px;">CREATING SPACES</h1>
               <h1 class="display-1 fw-bold" style="font-size: 100px;">THAT ASPIRE</h1>
-              <a href="{% url 'contact' %}"><button class="btn btn-outline-light custom-button mt-5 rounded-pill" type="button">Take a Look</button></a>
+              <a href="{% url 'contact' %}" style="text-decoration: none;"><button class="btn btn-outline-light custom-button mt-5 rounded-pill d-none d-md-block" type="button">Take a Look</button></a>
+
           </div>
         </div>
       
@@ -443,10 +457,12 @@
           </div>
   
           
-          <div class="col-12 col-lg-6" data-aos="fade-right">
-              <h6 class="rounded-pill p-1" style="background-color: rgb(212, 209, 209); width:60px">Since 1986</h6>
-              <h1 class="display-5 fw-bold" style="font-size: 60px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">The advantages of our</h1>
-              <h1 class="display-5 fw-bold "  style="font-size: 60px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">company.</h1>
+          <div class="col-12 col-lg-6 " data-aos="fade-right">
+            <h5 class="rounded-pill p-2 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 90px;  letter-spacing: 1px;">
+              SINCE 1986
+            </h5>
+              <h1 class="display-5 fw-bold" style="font-size: 60px;">The advantages of our</h1>
+              <h1 class="display-5 fw-bold "  style="font-size: 60px;">company.</h1>
               <p class="mt-4" style="font-size: 18px; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ">
                   Artificial Intelligence refers to the development of computer systems that can perform tasks that would
                   typically require human intelligence. It involves the creation of algorithms and models that enable
@@ -496,19 +512,20 @@
                 <img src="{% static 'image/award01.png' %}" alt="Award 1" class="img-fluid" data-aos="fade-up">
                 <p class="mt-4" style="font-size: 20px;" data-aos="fade-up">Top 5 Interior Design Inspiration 2023</p>
             </div>
-            <div class="col text-center">
+            
+            <div class="col text-center mt-5">
                 <img src="{% static 'image/award02.png' %}" alt="Award 2" class="img-fluid" data-aos="fade-up">
                 <p class="mt-4" style="font-size: 20px;" data-aos="fade-up">Top 10 Agency Use Sustainable Material</p>
             </div>
-            <div class="col text-center">
+            <div class="col text-center mt-5">
                 <img src="{% static 'image/award03.png' %}" alt="Award 3" class="img-fluid" data-aos="fade-up">
-                <p class="mt-4" style="font-size: 20px;" data-aos="fade-up">Winner Best CGI Artist 2022</p>
+                <p class="mt-4" style="font-size: 20px;" data-aos="fade-up">Winner Best CGI Artist  of 2022</p>
             </div>
-            <div class="col text-center">
+            <div class="col text-center mt-4">
                 <img src="{% static 'image/award04.png' %}" alt="Award 4" class="img-fluid" data-aos="fade-up">
                 <p class="mt-4" style="font-size: 20px;" data-aos="fade-up">Global Award Site of Year 2023</p>
             </div>
-            <div class="col text-center">
+            <div class="col text-center mt-5    ">
                 <img src="{% static 'image/award05.png' %}" alt="Award 5" class="img-fluid" data-aos="fade-up">
                 <p class="mt-4" style="font-size: 20px;" data-aos="fade-up">Expert Interior Design Inspiration 2023</p>
             </div>
@@ -589,7 +606,7 @@
 
        <div class="mt-5" >
         <marquee behavior="scroll" direction="left" scrollamount="10" data-aos="fade-up">
-          <div>
+          <div style="font-family: Roboto;">
             <h1 class="marquee-text"> <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE</h1>
           </div>
         </marquee>
@@ -600,7 +617,7 @@
       <!-- SLIDES 2 -->
 
       <div class="text-center mt-5" data-aos="fade-up">
-        <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 150px; margin: 0 auto; letter-spacing: 1px;">
+        <h6 class="rounded-pill p-2 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 250px; margin: 0 auto; letter-spacing: 1px; font-size:15px">
           TRUSTED EXPERIENCE
         </h6>
         <h1 class="custom-font-size fw-bold">Through a unique combination of</h1>
@@ -697,6 +714,7 @@
       
       <div style="margin-top: 30px;"></div>
 
+
       <!-- HORIZONTAL LINE -->
 
       <div class="d-flex align-items-center justify-content-between" data-aos="fade-up">
@@ -719,7 +737,7 @@
 
       <div class="container" data-aos="fade-up">
         <div class="text-center mt-5">
-          <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 100px; margin: 0 auto; letter-spacing: 1px;">
+          <h6 class="rounded-pill p-2 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 150px; margin: 0 auto; letter-spacing: 1px; font-size:15px">
             THE PROCESS
           </h6>
           <h1 class="custom-font-size fw-bold">Building the future</h1>
@@ -739,32 +757,32 @@
           <div class="col ms-5 text-center">
             <img src="{% static 'image/city1.png' %}" alt="sticker">
             <h1 class="mt-4">Spacing Plan</h1>
-            <p class="mt-5 h4 fw-100">Lorem ipsum is simply text of the</p>
-            <p class="h4 "> printing typesetting.</p>
+            <p class="mt-5 h4  " style="font-family: Roboto;">Lorem ipsum is simply text of the</p>
+            <p class="h4  " style="font-family: Roboto;"> printing typesetting.</p>
             
           </div>
           <!-- Home Staying -->
           <div class="col ms-5 text-center">
             <img src="{% static 'image/city2.png' %}" alt="sticker">
             <h1 class="mt-4">Home Staying</h1>
-            <p class="mt-5 h4">Lorem ipsum is simply text of the</p>
-            <p class="h4 "> printing typesetting.</p>
+            <p class="mt-5 h4 " style="font-family: Roboto;">Lorem ipsum is simply text of the</p>
+            <p class="h4 " style="font-family: Roboto;"> printing typesetting.</p>
             
           </div>
           <!-- Interior Design -->
           <div class="col ms-5 text-center">
             <img src="{% static 'image/city3.png' %}" alt="sticker">
             <h1 class="mt-4">Interior Design</h1>
-            <p class="mt-5 h4 ">Lorem ipsum is simply text of the</p>
-            <p class="h4"> printing typesetting.</p>
+            <p class="mt-5 h4 " style="font-family: Roboto;">Lorem ipsum is simply text of the</p>
+            <p class="h4" style="font-family: Roboto;"> printing typesetting.</p>
             
           </div>
           <!-- Remodeling Services -->
           <div class="col ms-5 text-center">
             <img src="{% static 'image/city4.png' %}" alt="sticker">
             <h1 class="mt-4">Model Services</h1>
-            <p class="mt-5 h4">Lorem ipsum is simply text of the </p>
-            <p class="h4 "> printing typesetting.</p>
+            <p class="mt-5 h4" style="font-family: Roboto;">Lorem ipsum is simply text of the </p>
+            <p class="h4 " style="font-family: Roboto;"> printing typesetting.</p>
             
           </div>
         </div>
@@ -778,11 +796,11 @@
        <!-- MESSAGE -->
 
        <div class="message d-flex align-items-center justify-content-center" data-aos="fade-up" style="gap: 1rem;">
-        <h4 class="rounded-pill p-2 text-white" style="background-color: rgb(23, 21, 21); margin: 0;">
+        <h4 class="rounded-pill p-2 text-white" style="background-color: rgb(23, 21, 21); margin: 0;font-family: Roboto;">
             Hurry
         </h4>
-        <h5 style="color: darkgrey; margin: 0;">
-            Let's make something great work together. <a href="{% url 'contact' %}" style="color: black;">Got a project in mind?</a>
+        <h5 style="color: darkgrey; margin: 0; font-family: Roboto; font-size:17px">
+            Let's make something great work together. <a href="{% url 'contact' %}" style="color: black;font-family: Roboto;">Got a project in mind?</a>
         </h5>
        </div>
 
@@ -831,8 +849,8 @@
           <div class="col-12 col-md-6" data-aos="fade-down" style="background-color: rgb(244, 247, 249); border-radius: 10px;">
             <div class="container text-center text-md-start">
               <div class="mt-4 mt-md-5">
-                <h6 class="rounded-pill p-1 mx-auto mx-md-0" 
-                    style="background-color: rgb(211, 203, 203); width: 80px; letter-spacing: 1px;">
+                <h6 class="rounded-pill p-2 mx-auto mx-md-0 fw-bold" 
+                    style="background-color: rgb(211, 203, 203); width: 110px; letter-spacing: 1px;font-size:12px">
                   TESTIMONIAL
                 </h6>
                 <h1 class="custom-font-size fw-bold">What our client's</h1>
@@ -845,9 +863,13 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active ">
                     <div>
-                      <div class="stars pb-5">
-                        <img src="{% static 'image/stars.png' %}" alt="">
-                      </div>
+                      <div class="stars mb-5">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                      </div>                      
                       <p class="h2 pb-5">“Solecto is among the world's leading renewable energy solutions providers that is revolutionizing and redefining the way energy sources are harnessed across the world.”</p>
                      <div class="feedimg">
                       <img src="{% static 'image/name.png' %}" alt="">
@@ -858,18 +880,26 @@
                   <div class="carousel-item">
                     <div>
                       <div class="stars pb-5">
-                        <img src="{% static 'image/stars.png' %}" alt="">
+                        <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
                       </div>
                       <p class="h2 pb-5">“Solecto is among the world's leading renewable energy solutions providers that is revolutionizing and redefining the way energy sources are harnessed across the world.”</p>
-                     <div class="feedimg">
-                      <img src="{% static 'image/name1.png' %}" alt="">
-                     </div>
+                      <div class="feedimg">
+                        <img src="{% static 'image/name1.png' %}" alt="">
+                       </div>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div>
                       <div class="stars pb-5">
-                        <img src="{% static 'image/stars.png' %}" alt="">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
                       </div>
                       <p class="h2 pb-5">“Solecto is among the world's leading renewable energy solutions providers that is revolutionizing and redefining the way energy sources are harnessed across the world.”</p>
                      <div class="feedimg">
@@ -899,9 +929,9 @@
         <div class="row" data-aos="fade-up">
           <div class="col-md-6 container-fluid mt-5 d-flex justify-content-start ps-5">
               <div >
-                  <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center " style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
-                  TESTMONIAL
-                  </h6>
+                <h6 class="rounded-pill p-2 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 130px;  letter-spacing: 1px; font-size:15px">
+                  TESTIMONIAL
+                </h6>
                   <h1 class="custom-font-size fw-bold">What our client's have</h1>
                   <h1 class="custom-font-size fw-bold">have to say</h1>
               </div>
@@ -911,7 +941,7 @@
 
               <form role="search">
                   <a href="{% url 'project' %}" class="text-decoration-none ">
-                  <button class="btn btn-outline-dark custom-button rounded-pill " type="button">
+                  <button class="btn btn-outline-dark custom-button rounded-pill " type="button" style="font-size: 15px;">
                       Take a Look
                   </button>
                   </a>
@@ -1006,7 +1036,7 @@
                   <button 
                     class="btn bg-white text-dark rounded-pill fw-bold p-4 d-flex justify-content-start" 
                     id="footerBtn" 
-                    style="width: 100px;">
+                    style="width: 100px;font-size:12px">
                     Subscribe Now
                   </button>
                 </div>
@@ -1065,6 +1095,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <script>
       
         AOS.init({

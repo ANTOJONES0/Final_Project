@@ -17,6 +17,10 @@
 
   <style>
 
+    *{
+      font-family: "Moderustic, sans-serif";
+    }
+
       body {
         margin-left: 25px;
         margin-right: 25px;
@@ -28,7 +32,7 @@
       }
 
       .nav-link {
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-decoration: none;
       }
 
@@ -339,6 +343,7 @@
               width: 100%;
               max-width: 350px;
               padding: 10px;
+              font-size: 15px;
             }
         
            
@@ -400,8 +405,8 @@
         </button>
         <div class="collapse navbar-collapse bg-transparent" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 ms-5 mt-5 mb-lg-0">
-                <li class="nav-item dropdown me-3">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                         Home
                     </a>
                     <ul class="dropdown-menu custom-dropdown">
@@ -410,8 +415,8 @@
                         <li><a class="dropdown-item" href="{% url 'home3' %}">Home Page 3</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown me-3">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                         Pages
                     </a>
                     <ul class="dropdown-menu custom-dropdown">
@@ -420,14 +425,14 @@
                         <li><a class="dropdown-item" href="{% url 'pricingplan' %}">Pricing Plan</a></li>
                     </ul>
                 </li>
-                <li class="nav-item me-3">
+                <li class="nav-item me-5">
                     <a class="nav-link" href="{% url 'service' %}">Services</a>
                 </li>
-                <li class="nav-item me-3">
+                <li class="nav-item me-5">
                     <a class="nav-link" href="{% url 'project' %}">Projects</a>
                 </li>
-                <li class="nav-item dropdown me-3">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                         Blog
                     </a>
                     <ul class="dropdown-menu custom-dropdown">
@@ -441,14 +446,14 @@
             </ul>
             <form class="d-flex" role="search">
               <a href="{% url 'contact' %}" class="text-decoration-none">
-                  <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button">
+                  <button class="btn btn-outline-dark custom-button mt-5 rounded-pill d-none d-lg-block" type="button" style="font-size: 19px;">
                       Contact Us
                   </button>
               </a>
             </form>
         </div>
     </div>
-  </nav>
+   </nav>
   
   <!-- HOME IMAGE -->
    
@@ -459,10 +464,10 @@
 
     <div class="mask text-light d-flex flex-column justify-content-start align-items-center  p-4 mt-5">
       <div class="container">
-          <h3 style="font-size: 20px;">Constructing an Improved Future</h3>
-          <h1 class=" fw-bolder" style="font-size: 70px;">Architecture that<br> recognizes all<br> your sensibilities.</h1>
-          
-          <a href="{% url 'contact' %}"><button class="btn btn-outline-light custom-button mt-5 rounded-pill" type="button">Take a Look</button></a>
+          <h3 style="font-size: 28px;">Constructing an Improved Future</h3>
+          <h1 class=" fw-bolder" style="font-size: 70px;">Architecture that<br> recognizes </h1>
+          <h1 class=" fw-bolder" style="font-size: 70px;">your sensibilities.</h1>
+          <a href="{% url 'contact' %}" style="text-decoration: none;"><button class="btn btn-outline-light custom-button mt-5 rounded-pill d-none d-md-block" type="button">Take a Look</button></a>
       </div>
     </div>
   
@@ -489,11 +494,12 @@
                 <!--COLUMN 2-->
 
                 <div class="col-lg-6 text-center">
-                    <div class="container" >
+
+                    <div class="container" style="background-color: rgba(248,248,248,255); height:89rem;border-radius:20px;" >
                         <div class="text-center mt-5">
-                          <h6 class="rounded-pill p-1 mt-5" style="background-color: rgb(211, 203, 203); width: 100px; margin: 0 auto; letter-spacing: 1px;">
+                          <h5 class="rounded-pill p-2 mt-5 fw-bold" style="background-color: rgb(211, 203, 203); width: 90px;margin: 0 auto;  letter-spacing: 1px;">
                             SINCE 1986
-                          </h6>
+                          </h5>
                           <div style="margin-top: 20px;"></div>
                           <h1 class="custom-font-size fw-bold">We believe innovation is the</h1>
                           <h1 class="custom-font-size fw-bold">key to build a better future</h1>
@@ -559,7 +565,7 @@
 
         <div class="mt-5" >
             <marquee behavior="scroll" direction="left" scrollamount="10">
-              <div>
+              <div style="font-family: Roboto;">
                 <h1 class="marquee-text"> <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE<img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE <img src="{% static 'image/star.png' %}"> CHANGING ROOM <img src="{% static 'image/star.png' %}"> LOUNGE CAFE</h1>
               </div>
             </marquee>
@@ -572,7 +578,7 @@
           <!--YEARS-->
 
           <div class="container-fluid mt-5" data-aos="fade-up">
-            <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center" style="background-color: rgb(211, 203, 203); width: 100px; letter-spacing: 1px;">
+            <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center fw-bold" style="background-color: rgb(211, 203, 203); width: 100px; letter-spacing: 1px;">
               THE PROCESS
             </h6>
             <h1 class="custom-font-size fw-bold">Meet our studio in</h1>
@@ -595,9 +601,9 @@
       
                     <div style="margin-top: 30px;"></div>
                     <div class="pe-5">
-                      <p class="h1">Create a company<p>
+                      <p class="h1" >Create a company<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color: rgb(114, 110, 110)">Our company Arcpro was created.</h1>
+                      <h1 class="h3" style="color: rgb(114, 110, 110);font-family: Roboto;">Our company Arcpro was created.</h1>
                     </div>
       
                   </div>
@@ -613,7 +619,7 @@
                     <div class="pe-5">
                       <p class="h1">Launch a New Project<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color:  rgb(114, 110, 110)";>We launched our first project.</h1>
+                      <h1 class="h3" style="color:  rgb(114, 110, 110);font-family: Roboto;";>We launched our first project.</h1>
                     </div>
                   </div>
                   <div class="col-6 col-lg-3">
@@ -628,7 +634,7 @@
                     <div class="pe-5">
                       <p class="h1">Launch a Website<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color:  rgb(114, 110, 110)";>Website was launced for the online clients.</h1>
+                      <h1 class="h3" style="color:  rgb(114, 110, 110);font-family: Roboto;";>Website was launced for the online clients.</h1>
                     </div>
                   </div>
                   <div class="col-6 col-lg-3">
@@ -643,7 +649,7 @@
                     <div class="pe-5">
                       <p class="h1">Strategic Planning<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color:  rgb(114, 110, 110)";>Teams were appointed for planning.</h1>
+                      <h3 style="color:  rgb(114, 110, 110);font-family: Roboto;";>Teams were appointed for planning.</h3>
                     </div>
                     
                   </div>
@@ -663,7 +669,7 @@
                     <div class="pe-5">
                       <p class="h1">Professional Branding<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color:  rgb(114, 110, 110)">Unique Brand was created.</h1>
+                      <h1 class="h3" style="color:  rgb(114, 110, 110)">Unique Brand was created.</h1>
                     </div>
       
                   </div>
@@ -679,7 +685,7 @@
                     <div class="pe-5">
                       <p class="h1">Construction Records<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color:  rgb(114, 110, 110)";>Huge number of Constructions were build.</h6>
+                      <h1 class="h3" style="color:  rgb(114, 110, 110)";>Huge number of Constructions were build.</h6>
                     </div>
                   </div>
                   <div class="col-6 col-lg-3">
@@ -694,7 +700,7 @@
                     <div class="pe-5">
                       <p class="h1">New Creative Team<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color:  rgb(114, 110, 110)";>Many team members were joined for creative designs.</h6>
+                      <h1 class="h3" style="color:  rgb(114, 110, 110)";>Many team members were joined for creative designs.</h6>
                     </div>
                   </div>
                   <div class="col-6 col-lg-3">
@@ -709,7 +715,7 @@
                     <div class="pe-5">
                       <p class="h1">Best Architect Award<p>
                       <div style="margin-top: 20px;"></div>
-                      <h1 style="color:  rgb(114, 110, 110)";>We are proud to gain this title.</h1>
+                      <h1 class="h3" style="color:  rgb(114, 110, 110)";>We are proud to gain this title.</h1>
                     </div>
                     
                   </div>
@@ -735,13 +741,13 @@
           <!--MESSAGE-->
 
           <div class="message d-flex align-items-center justify-content-center" data-aos="fade-up" style="gap: 1rem;">
-            <h4 class="rounded-pill p-2 text-white" style="background-color: rgb(23, 21, 21); margin: 0;">
+            <h4 class="rounded-pill p-2 text-white" style="background-color: rgb(23, 21, 21); margin: 0;font-family: Roboto;">
                 Hurry
             </h4>
-            <h5 style="color: darkgrey; margin: 0;">
-                Let's make something great work together. <a href="{% url 'contact' %}" style="color: black;">Got a project in mind?</a>
+            <h5 style="color: darkgrey; margin: 0; font-family: Roboto; font-size:17px">
+                Let's make something great work together. <a href="{% url 'contact' %}" style="color: black;font-family: Roboto;">Got a project in mind?</a>
             </h5>
-          </div>
+           </div>
 
 
           <div style="margin-top: 100px;"></div>
@@ -795,7 +801,7 @@
            <div class="row" data-aos="fade-up">
                 <div class="col-md-6 container-fluid mt-5 d-flex justify-content-start ps-5">
                     <div >
-                        <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center " style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
+                        <h6 class="rounded-pill p-1 mt-5 d-flex justify-content-center fw-bold" style="background-color: rgb(211, 203, 203); width: 90px; letter-spacing: 1px;">
                         OUR TEAM
                         </h6>
                         <h1 class="custom-font-size fw-bold">Our expert team</h1>
@@ -821,9 +827,9 @@
               <div class="d-flex justify-content-center">
                 <img src="{% static 'image/team1.png' %}" alt="sticker">
               </div>
-              <h1>Robert Johnson</h1>
+              <h1 style="font-size: 30px;">Robert Johnson</h1>
               <div class="d-flex align-items-center">
-                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Construction Manager</h6>
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3 " style="font-size: 15px;">Construction Manager</h6>
                 <div class="share ms-auto">
                   <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
                     <i class="fas fa-share-alt fa-2x"></i>
@@ -849,9 +855,9 @@
               <div class="d-flex justify-content-center">
                 <img src="{% static 'image/team2.png' %}" alt="sticker">
               </div>
-              <h1>Marko Daniel</h1>
+              <h1 style="font-size: 30px;">Marko Daniel</h1>
               <div class="d-flex align-items-center">
-                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Architect</h6>
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3" style="font-size: 20px;">Architect</h6>
                 <div class="share ms-auto">
                   <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
                     <i class="fas fa-share-alt fa-2x"></i>
@@ -875,9 +881,9 @@
               <div class="d-flex justify-content-center">
                 <img src="{% static 'image/team3.png' %}" alt="sticker">
               </div>
-              <h1>Jake Nicholson</h1>
+              <h1 style="font-size: 30px;">Jake Nicholson</h1>
               <div class="d-flex align-items-center">
-                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Site Supervisor</h6>
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3" style="font-size: 20px;">Site Supervisor</h6>
                 <div class="share ms-auto">
                   <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
                     <i class="fas fa-share-alt fa-2x"></i>
@@ -901,9 +907,9 @@
               <div class="d-flex justify-content-center">
                 <img src="{% static 'image/team4.png' %}" alt="sticker">
               </div>
-              <h1>Sony Miltor</h1>
+              <h1 style="font-size: 30px;">Sony Miltor</h1>
               <div class="d-flex align-items-center">
-                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3">Estimator</h6>
+                <h6 class="mb-0 flex-grow-1 text-center ms-5 ps-3"style="font-size: 20px;">Estimator</h6>
                 <div class="share ms-auto">
                   <div class="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle" style="width: 40px; height: 40px;">
                     <i class="fas fa-share-alt fa-2x"></i>
@@ -997,9 +1003,9 @@
                   style="background-color: black; color: white; caret-color: white; width: 500px;"
                   aria-label="Email Address">
                 <button 
-                  class="btn bg-white text-dark rounded-pill fw-bold p-4 d-flex justify-content-start" 
+                  class="btn bg-white text-dark text-center rounded-pill fw-bold p-4 d-flex justify-content-start" 
                   id="footerBtn" 
-                  style="width: 100px;">
+                  style="width: 100px; font-size: 12px;">
                   Subscribe Now
                 </button>
               </div>
