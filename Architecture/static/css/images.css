@@ -1,0 +1,35 @@
+.custom-button {
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .services{
+    border: 1px solid rgb(192, 186, 186);
+    border-radius: 20px;
+  }
+
+  .services a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .register img{
+    background-image: url(../static/image/register.jpg);
+    border-radius: 20px;
+    max-width: 42rem;
+    height: 45rem;
+    opacity: 0.6;
+  }
+
+  .sustainableimg img{
+   border-radius: 10px;
+  }
+
+  .para h2{
+    color: rgb(112, 110, 110);
+  }
+
+  .para li{
+    color: black;
+  }
+
+  
