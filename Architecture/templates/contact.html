@@ -169,10 +169,12 @@
           }
           button {
            
-            color: white;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
             border: none;
+            background-color: black;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
           }
         
@@ -434,11 +436,11 @@
       <div class="col-lg-7 ps-5 p-5" style="background-color: rgb(245, 243, 243); border-radius:10px"  data-aos="fade-right">
         <div>
             <h1 style="font-size: 40px;" class="pt-5">Send us a Message</h1><br>
-            <form method="POST" autocomplete="off" id="dataForm">
+            <form method="POST" autocomplete="off" id="">
                 {% csrf_token %}
                 <div id="footerMail">
                     <div>
-                        <textarea name="message" id="" rows="5" placeholder="Message" class="messagearea pt-5"></textarea>
+                        <textarea name="mess" id="" rows="5" placeholder="Message" class="messagearea pt-5"></textarea>
                     </div>
                     <div class="input2 d-flex justify-content-start pt-4 flex-column flex-lg-row">
                         <input type="text" placeholder="Company Name" class="rounded-pill" name="company">
@@ -452,7 +454,7 @@
                             <input type="text" placeholder="Phone Number" class="rounded-pill" name="phone">
                         </div>
                     </div>
-                    <div class="btn ps-5 pt-5">
+                    <div class="submit ps-5 pt-5">
                         <button type="submit" id="footerBtn">Submit</button>
                     </div>
                 </div>
@@ -527,7 +529,7 @@
               <input 
                 type="email" 
                 name="email"
-                placeholder="Enter your Email address" 
+                placeholder="Enter your email address" 
                 class="form-control rounded-pill custom-input p-5 d-flex justify-content-start" 
                 id="emailInput"
                 style="background-color: black; color: white; caret-color: white; width: 500px;"
@@ -612,6 +614,7 @@
             once: true
         });
     </script>
+    <script src="{% static 'js/footerMail.js' %}"></script>
      
 
 </body>

@@ -343,7 +343,7 @@
 
     .stars {
       font-size: 20px;
-      color: #FF9800; /* Star color */
+      color: #FF9800; 
   }
 
     
@@ -561,26 +561,38 @@
               <div class="carousel-item active" data-bs-interval="5000">
                 <div class="row g-4"> 
                   <div class="col-md-4">
-                    <img src="{% static 'image/slide1.png' %}" class="d-block w-100" alt="...">
+                    <a href="{% url 'projectm' %}">
+                      <img src="{% static 'image/slide1.png' %}" class="d-block w-100" alt="...">
+                    </a>
                   </div>
                   <div class="col-md-4">
-                    <img src="{% static 'image/slide2.png' %}" class="d-block w-100" alt="...">
+                    <a href="{% url 'design' %}">
+                      <img src="{% static 'image/slide2.png' %}" class="d-block w-100" alt="...">
+                    </a>
                   </div>
                   <div class="col-md-4">
-                    <img src="{% static 'image/slide3.png' %}" class="d-block w-100" alt="...">
+                    <a href="{% url 'furniture' %}">
+                      <img src="{% static 'image/slide3.png' %}" class="d-block w-100" alt="...">
+                    </a>
                   </div>
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="2000">
                 <div class="row g-3"> 
                   <div class="col-md-4">
-                    <img src="{% static 'image/slide4.png' %}" class="d-block w-100" alt="...">
+                    <a href="{% url 'sustainable' %}">
+                      <img src="{% static 'image/slide4.png' %}" class="d-block w-100" alt="...">
+                    </a>
                   </div>
                   <div class="col-md-4">
-                    <img src="{% static 'image/slide5.png' %}" class="d-block w-100" alt="...">
+                    <a href="{% url 'renovation' %}">
+                      <img src="{% static 'image/slide5.png' %}" class="d-block w-100" alt="...">
+                    </a>
                   </div>
                   <div class="col-md-4">
-                    <img src="{% static 'image/slide6.png' %}" class="d-block w-100" alt="...">
+                    <a href="{% url 'custom' %}">
+                      <img src="{% static 'image/slide6.png' %}" class="d-block w-100" alt="...">
+                    </a>
                   </div>
                 </div>
               </div>
